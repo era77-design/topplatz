@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 export default function HomePage({ params }) {
   const { lang } = params
 
