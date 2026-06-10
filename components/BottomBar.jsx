@@ -16,6 +16,18 @@ export default function BottomBar() {
     window.location.href = segments.join('/')
   }
 
+  const iconStyle = { fontSize: '20px', color: 'var(--text)' }
+  const labelStyle = { fontSize: '10px', color: 'var(--text-secondary)' }
+  const tabStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '3px',
+    flex: 1,
+    padding: '8px 0',
+    textDecoration: 'none',
+  }
+
   return (
     <>
       {/* More sheet */}
@@ -27,6 +39,7 @@ export default function BottomBar() {
           right: 0,
           background: 'var(--nav-bg)',
           borderTop: '0.5px solid var(--border)',
+          boxShadow: '0 -4px 20px rgba(0,0,0,0.12)',
           padding: '16px',
           zIndex: 99,
         }}>
@@ -35,21 +48,22 @@ export default function BottomBar() {
             {LANGS.map(l => (
               <button key={l} onClick={() => switchLang(l)} style={{
                 fontSize: '12px',
-                padding: '5px 12px',
+                padding: '6px 14px',
                 borderRadius: '6px',
                 border: '0.5px solid var(--border)',
                 background: lang === l ? 'var(--text)' : 'transparent',
                 color: lang === l ? 'var(--bg)' : 'var(--text-secondary)',
                 cursor: 'pointer',
+                fontWeight: lang === l ? 500 : 400,
               }}>
                 {l.toUpperCase()}
               </button>
             ))}
           </div>
 
-          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '10px' }}>Pages</p>
+          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '8px' }}>Pages</p>
           {[
-            { href: `/${lang}/about`, icon: 'ℹ️', label: 'About' },
+            { href: `/${lang}/about`,   icon: 'ℹ️', label: 'About' },
             { href: `/${lang}/contact`, icon: '✉️', label: 'Contact' },
             { href: `/${lang}/privacy`, icon: '🔒', label: 'Privacy Policy' },
           ].map(item => (
@@ -57,19 +71,21 @@ export default function BottomBar() {
               display: 'flex',
               alignItems: 'center',
               gap: '12px',
-              padding: '12px 0',
+              padding: '13px 0',
               borderBottom: '0.5px solid var(--border)',
               fontSize: '15px',
+              color: 'var(--text)',
+              textDecoration: 'none',
             }}>
-              <span>{item.icon}</span>
+              <span style={{ fontSize: '18px', width: '24px', textAlign: 'center' }}>{item.icon}</span>
               <span>{item.label}</span>
-              <span style={{ marginLeft: 'auto', color: 'var(--text-secondary)' }}>›</span>
+              <span style={{ marginLeft: 'auto', color: 'var(--text-secondary)', fontSize: '18px' }}>›</span>
             </Link>
           ))}
         </div>
       )}
 
-      {/* Bottom tab bar — только на мобиле */}
+      {/* Bottom tab bar */}
       <nav className="bottom-bar" style={{
         position: 'fixed',
         bottom: 0,
@@ -78,42 +94,33 @@ export default function BottomBar() {
         height: '60px',
         background: 'var(--nav-bg)',
         borderTop: '0.5px solid var(--border)',
+        boxShadow: '0 -4px 12px rgba(0,0,0,0.08)',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
         zIndex: 100,
       }}>
         {[
-          { href: `/${lang}`, icon: '🏠', label: 'Home' },
-          { href: `/${lang}/search`, icon: '🔍', label: 'Search' },
+          { href: `/${lang}`,            icon: '🏠', label: 'Home' },
+          { href: `/${lang}/search`,     icon: '🔍', label: 'Search' },
           { href: `/${lang}/categories`, icon: '📂', label: 'Categories' },
         ].map(item => (
-          <Link key={item.href} href={item.href} style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '3px',
-            flex: 1,
-            padding: '8px 0',
-          }}>
-            <span style={{ fontSize: '20px' }}>{item.icon}</span>
-            <span style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>{item.label}</span>
+          <Link key={item.href} href={item.href} style={tabStyle}>
+            <span style={iconStyle}>{item.icon}</span>
+            <span style={labelStyle}>{item.label}</span>
           </Link>
         ))}
 
         <button onClick={() => setMoreOpen(!moreOpen)} style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '3px',
-          flex: 1,
-          padding: '8px 0',
+          ...tabStyle,
           background: 'none',
           border: 'none',
           cursor: 'pointer',
         }}>
-          <span style={{ fontSize: '20px' }}>{moreOpen ? '✕' : '☰'}</span>
-          <span style={{ fontSize: '10px', color: 'var(--text-secondary)' }}>More</span>
+          <span style={{ fontSize: '22px', color: 'var(--text)', lineHeight: 1 }}>
+            {moreOpen ? '✕' : '☰'}
+          </span>
+          <span style={labelStyle}>More</span>
         </button>
       </nav>
 
