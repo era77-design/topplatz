@@ -47,6 +47,8 @@ export async function generateMetadata({ params }) {
 // Простой Markdown → HTML конвертер
 function parseMarkdown(md) {
   return md
+    .replace(/!\[[^\]]*\]\([^)]+\)\n\*Photo by[\s\S]*?on \[Unsplash\][^\n]*/g, '')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
     .replace(/^### (.*$)/gim, '<h3>$1</h3>')
     .replace(/^## (.*$)/gim, '<h2>$1</h2>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -54,10 +56,8 @@ function parseMarkdown(md) {
     .replace(/^> (.+)/gim, '<blockquote>$1</blockquote>')
     .replace(/^- (.+)/gim, '<li>$1</li>')
     .replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>')
-    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" />')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
     .replace(/\n\n+/g, '</p><p>')
-    .replace(/^(?!<[hublipa])/gim, '')
 }
 
 export default async function ArticlePage({ params }) {
