@@ -1,7 +1,18 @@
 export const runtime = 'edge'
 
-export default function PrivacyPage({ params }) {
-  const { lang } = params
+export async function generateMetadata({ params }) {
+  const { lang } = await params
+  const titles = {
+    en: 'Privacy Policy — TopPlatz',
+    de: 'Datenschutz — TopPlatz',
+    nl: 'Privacybeleid — TopPlatz',
+    sv: 'Integritetspolicy — TopPlatz',
+  }
+  return { title: titles[lang] || titles.en }
+}
+
+export default async function PrivacyPage({ params }) {
+  const { lang } = await params
 
   const content = {
     en: {

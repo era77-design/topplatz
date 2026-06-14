@@ -1,7 +1,7 @@
+export const runtime = 'edge'
+
 import Link from 'next/link'
 import articlesData from '@/data/articles-meta.json'
-
-const LANGS = ['en', 'de', 'nl', 'sv']
 
 const CATEGORIES = [
   { slug: 'home-garden',  icon: '🏠', en: 'Home & Garden',  de: 'Haus & Garten',    nl: 'Huis & Tuin',      sv: 'Hem & Trädgård' },
@@ -9,10 +9,6 @@ const CATEGORIES = [
   { slug: 'tech-devices', icon: '💻', en: 'Tech & Devices', de: 'Technik & Geräte', nl: 'Tech & Apparaten', sv: 'Teknik & Enheter' },
   { slug: 'diy-crafts',   icon: '✂️', en: 'DIY & Crafts',   de: 'Heimwerken',       nl: 'Knutselen',        sv: 'Gör det själv' },
 ]
-
-export async function generateStaticParams() {
-  return LANGS.map(lang => ({ lang }))
-}
 
 export async function generateMetadata({ params }) {
   const { lang } = await params

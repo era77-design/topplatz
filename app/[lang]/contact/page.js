@@ -1,10 +1,21 @@
 export const runtime = 'edge'
 
-export default function ContactPage({ params }) {
-  const { lang } = params
+export async function generateMetadata({ params }) {
+  const { lang } = await params
+  const titles = {
+    en: 'Contact — TopPlatz',
+    de: 'Kontakt — TopPlatz',
+    nl: 'Contact — TopPlatz',
+    sv: 'Kontakta oss — TopPlatz',
+  }
+  return { title: titles[lang] || titles.en }
+}
+
+export default async function ContactPage({ params }) {
+  const { lang } = await params
 
   const content = {
-    en: { title: 'Contact Us', text: 'Have a question or suggestion? We\'d love to hear from you.', label: 'General inquiries:' },
+    en: { title: 'Contact Us', text: "Have a question or suggestion? We'd love to hear from you.", label: 'General inquiries:' },
     de: { title: 'Kontakt', text: 'Haben Sie eine Frage? Wir freuen uns von Ihnen zu hören.', label: 'Allgemeine Anfragen:' },
     nl: { title: 'Contact', text: 'Heeft u een vraag? We horen graag van u.', label: 'Algemene vragen:' },
     sv: { title: 'Kontakta oss', text: 'Har du en fråga? Vi hör gärna från dig.', label: 'Allmänna frågor:' },

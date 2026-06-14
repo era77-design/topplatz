@@ -1,7 +1,8 @@
+export const runtime = 'edge'
+
 import Link from 'next/link'
 import articlesData from '@/data/articles-meta.json'
 
-const LANGS = ['en', 'de', 'nl', 'sv']
 const CATEGORIES = [
   { slug: 'home-garden',  icon: '🏠', en: 'Home & Garden',  de: 'Haus & Garten',    nl: 'Huis & Tuin',      sv: 'Hem & Trädgård' },
   { slug: 'kitchen-food', icon: '🍳', en: 'Kitchen & Food', de: 'Küche & Essen',    nl: 'Keuken & Eten',    sv: 'Kök & Mat' },
@@ -14,10 +15,6 @@ const LABELS = {
   de: { title: 'Alle Kategorien', articles: 'Anleitungen', home: 'Startseite' },
   nl: { title: 'Alle categorieën', articles: 'handleidingen', home: 'Home' },
   sv: { title: 'Alla kategorier', articles: 'guider', home: 'Hem' },
-}
-
-export async function generateStaticParams() {
-  return LANGS.map(lang => ({ lang }))
 }
 
 export async function generateMetadata({ params }) {

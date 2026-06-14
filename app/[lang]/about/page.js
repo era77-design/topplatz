@@ -1,7 +1,18 @@
 export const runtime = 'edge'
 
-export default function AboutPage({ params }) {
-  const { lang } = params
+export async function generateMetadata({ params }) {
+  const { lang } = await params
+  const titles = {
+    en: 'About — TopPlatz',
+    de: 'Über uns — TopPlatz',
+    nl: 'Over ons — TopPlatz',
+    sv: 'Om oss — TopPlatz',
+  }
+  return { title: titles[lang] || titles.en }
+}
+
+export default async function AboutPage({ params }) {
+  const { lang } = await params
 
   const content = {
     en: { title: 'About TopPlatz', body: 'TopPlatz is a collection of practical how-to guides covering everyday topics — from home repair and cooking to gardening and technology.', mission: 'Our Mission', missionText: 'We believe everyone deserves access to clear, practical information. Every guide is written to be easy to follow, with real steps and honest tips.' },
