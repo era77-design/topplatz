@@ -14,10 +14,10 @@ const CATEGORIES = [
 ]
 
 const UI = {
-  en: { home: 'Home', contents: 'Contents', whatYouNeed: '🛒 What You Need', steps: '📋 Steps', tips: '💡 Tips & Tricks', warnings: '⚠️ Warnings', faq: '❓ Frequently Asked Questions', related: 'Related Guides', helpful: 'Was this guide helpful?', yes: 'Yes', no: 'Not really', share: 'Share', print: 'Print', readTime: 'min read', difficulty: 'Difficulty', jumpTo: 'Jump to steps ↓', adLabel: 'Advertisement' },
-  de: { home: 'Startseite', contents: 'Inhalt', whatYouNeed: '🛒 Was Sie brauchen', steps: '📋 Schritte', tips: '💡 Tipps & Tricks', warnings: '⚠️ Warnungen', faq: '❓ Häufige Fragen', related: 'Ähnliche Anleitungen', helpful: 'War diese Anleitung hilfreich?', yes: 'Ja', no: 'Nicht wirklich', share: 'Teilen', print: 'Drucken', readTime: 'Min. Lesezeit', difficulty: 'Schwierigkeit', jumpTo: 'Zu den Schritten ↓', adLabel: 'Werbung' },
-  nl: { home: 'Home', contents: 'Inhoud', whatYouNeed: '🛒 Wat u nodig heeft', steps: '📋 Stappen', tips: '💡 Tips & Tricks', warnings: '⚠️ Waarschuwingen', faq: '❓ Veelgestelde vragen', related: 'Gerelateerde handleidingen', helpful: 'Was deze handleiding nuttig?', yes: 'Ja', no: 'Niet echt', share: 'Delen', print: 'Afdrukken', readTime: 'min lezen', difficulty: 'Moeilijkheid', jumpTo: 'Naar stappen ↓', adLabel: 'Advertentie' },
-  sv: { home: 'Hem', contents: 'Innehåll', whatYouNeed: '🛒 Vad du behöver', steps: '📋 Steg', tips: '💡 Tips & Tricks', warnings: '⚠️ Varningar', faq: '❓ Vanliga frågor', related: 'Relaterade guider', helpful: 'Var den här guiden till hjälp?', yes: 'Ja', no: 'Inte riktigt', share: 'Dela', print: 'Skriv ut', readTime: 'min läsning', difficulty: 'Svårighetsgrad', jumpTo: 'Till stegen ↓', adLabel: 'Annons' },
+  en: { home: 'Home', contents: 'Contents', whatYouNeed: '🛒 What You Need', steps: '📋 Steps', tips: '💡 Tips & Tricks', warnings: '⚠️ Warnings', faq: '❓ Frequently Asked Questions', related: 'Related Guides', helpful: 'Was this guide helpful?', yes: 'Yes', no: 'Not really', share: 'Share', readTime: 'min read', jumpTo: 'Jump to steps ↓', adLabel: 'Advertisement' },
+  de: { home: 'Startseite', contents: 'Inhalt', whatYouNeed: '🛒 Was Sie brauchen', steps: '📋 Schritte', tips: '💡 Tipps & Tricks', warnings: '⚠️ Warnungen', faq: '❓ Häufige Fragen', related: 'Ähnliche Anleitungen', helpful: 'War diese Anleitung hilfreich?', yes: 'Ja', no: 'Nicht wirklich', share: 'Teilen', readTime: 'Min. Lesezeit', jumpTo: 'Zu den Schritten ↓', adLabel: 'Werbung' },
+  nl: { home: 'Home', contents: 'Inhoud', whatYouNeed: '🛒 Wat u nodig heeft', steps: '📋 Stappen', tips: '💡 Tips & Tricks', warnings: '⚠️ Waarschuwingen', faq: '❓ Veelgestelde vragen', related: 'Gerelateerde handleidingen', helpful: 'Was deze handleiding nuttig?', yes: 'Ja', no: 'Niet echt', share: 'Delen', readTime: 'min lezen', jumpTo: 'Naar stappen ↓', adLabel: 'Advertentie' },
+  sv: { home: 'Hem', contents: 'Innehåll', whatYouNeed: '🛒 Vad du behöver', steps: '📋 Steg', tips: '💡 Tips & Tricks', warnings: '⚠️ Varningar', faq: '❓ Vanliga frågor', related: 'Relaterade guider', helpful: 'Var den här guiden till hjälp?', yes: 'Ja', no: 'Inte riktigt', share: 'Dela', readTime: 'min läsning', jumpTo: 'Till stegen ↓', adLabel: 'Annons' },
 }
 
 function detectCategory(keyword = '', slug = '') {
@@ -78,9 +78,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-// ── MARKDOWN HELPERS ──────────────────────────────────────────
-
-function slug(text) {
+function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')
 }
 
@@ -115,8 +113,6 @@ function renderLines(lines) {
   return out.join('')
 }
 
-// ── CONTENT PARSER ────────────────────────────────────────────
-
 function parseContent(raw) {
   const clean = raw.replace(/!\[[^\]]*\]\([^)]+\)\n\*Photo by[\s\S]*?on \[Unsplash\][^\n]*/g, '').replace(/!\[[^\]]*\]\([^)]+\)/g, '').trim()
   const sections = []
@@ -127,10 +123,10 @@ function parseContent(raw) {
       if (cur) sections.push(cur)
       else if (introLines.length) { sections.push({ type: 'intro', lines: introLines }); introLines = [] }
       const heading = line.slice(3).trim()
-      cur = { type: 'section', heading, id: slug(heading), lines: [], subsections: [] }
+      cur = { type: 'section', heading, id: slugify(heading), lines: [], subsections: [] }
     } else if (line.startsWith('### ') && cur) {
       const heading = line.slice(4).trim()
-      cur.subsections.push({ heading, id: slug(heading), lines: [] })
+      cur.subsections.push({ heading, id: slugify(heading), lines: [] })
     } else if (cur) {
       cur.subsections.length ? cur.subsections[cur.subsections.length - 1].lines.push(line) : cur.lines.push(line)
     } else {
@@ -142,11 +138,9 @@ function parseContent(raw) {
   return sections
 }
 
-// ── AD SLOT ───────────────────────────────────────────────────
-
 function AdSlot({ slot, label = 'Advertisement' }) {
   return (
-    <div className={`ad-slot ad-slot-${slot}`} style={{ textAlign: 'center', padding: '8px 0', margin: '20px 0' }}>
+    <div style={{ textAlign: 'center', padding: '8px 0', margin: '20px 0' }}>
       <p style={{ fontSize: '10px', color: 'var(--text-secondary)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{label}</p>
       <ins className="adsbygoogle"
         style={{ display: 'block', minHeight: '90px', background: 'var(--bg-secondary)', borderRadius: '8px' }}
@@ -158,8 +152,6 @@ function AdSlot({ slot, label = 'Advertisement' }) {
     </div>
   )
 }
-
-// ── MAIN PAGE ─────────────────────────────────────────────────
 
 export default async function ArticlePage({ params }) {
   const { lang, slug: articleSlug } = await params
@@ -183,17 +175,14 @@ export default async function ArticlePage({ params }) {
   const sections = parseContent(content)
   const related = getRelated(lang, articleSlug, category)
 
-  // TOC from sections
   const toc = sections.filter(s => s.type === 'section').map(s => ({
     text: s.heading, id: s.id,
     subs: (s.subsections || []).filter(sub => !/step \d+/i.test(sub.heading)).map(sub => ({ text: sub.heading, id: sub.id }))
   }))
 
-  // Identify step subsections
   const stepSection = sections.find(s => s.type === 'section' && /^steps?$/i.test(s.heading))
   const steps = stepSection?.subsections || []
 
-  // FAQ items
   const faqSection = sections.find(s => s.type === 'section' && /faq|frequently/i.test(s.heading))
   const faqs = []
   if (faqSection) {
@@ -204,8 +193,6 @@ export default async function ArticlePage({ params }) {
       else if (q && t2) { faqs.push({ q, a: t2 }); q = null }
     }
   }
-
-  // ── SCHEMA.ORG ──────────────────────────────────────────────
 
   const howToSchema = {
     '@context': 'https://schema.org',
@@ -245,17 +232,13 @@ export default async function ArticlePage({ params }) {
     })),
   } : null
 
-  // ── RENDER ──────────────────────────────────────────────────
-
   return (
     <div style={{ maxWidth: '1060px', margin: '0 auto', padding: '0 16px 48px' }}>
 
-      {/* Schema.org */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
-      {/* Breadcrumbs */}
       <nav aria-label="breadcrumb" style={{ padding: '16px 0 0', fontSize: '13px', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
         <Link href={`/${lang}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.home}</Link>
         <span>›</span>
@@ -264,7 +247,6 @@ export default async function ArticlePage({ params }) {
         <span style={{ color: 'var(--text)', maxWidth: '280px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{fm.title}</span>
       </nav>
 
-      {/* Hero photo */}
       {fm.photoUrl && (
         <div style={{ margin: '16px 0' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -277,7 +259,6 @@ export default async function ArticlePage({ params }) {
         </div>
       )}
 
-      {/* Title area */}
       <div style={{ marginBottom: '20px' }}>
         <div style={{ display: 'flex', gap: '8px', marginBottom: '12px', flexWrap: 'wrap' }}>
           <Link href={`/${lang}/category/${category}`} style={{ textDecoration: 'none' }}>
@@ -292,7 +273,6 @@ export default async function ArticlePage({ params }) {
         <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{fm.description}</p>
       </div>
 
-      {/* At a Glance + Jump to steps */}
       <div style={{ background: 'var(--bg-secondary)', border: '0.5px solid var(--border)', borderRadius: '12px', padding: '16px 20px', marginBottom: '20px', display: 'flex', gap: '16px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: '200px' }}>
           <p style={{ fontSize: '12px', fontWeight: 500, color: 'var(--text-secondary)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Quick Summary</p>
@@ -309,16 +289,11 @@ export default async function ArticlePage({ params }) {
         )}
       </div>
 
-      {/* AD #1 — after intro */}
       <AdSlot slot="1234567890" label={t.adLabel} />
 
-      {/* Desktop layout: content + sidebar */}
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 280px', gap: '32px', alignItems: 'start' }} className="article-layout">
 
-        {/* Main content */}
         <main>
-
-          {/* TOC — mobile (shown inline) */}
           {toc.length > 2 && (
             <div style={{ background: 'var(--bg-secondary)', border: '0.5px solid var(--border)', borderRadius: '12px', padding: '16px', marginBottom: '28px' }} className="toc-mobile">
               <p style={{ fontSize: '13px', fontWeight: 500, marginBottom: '10px', color: 'var(--text)' }}>📋 {t.contents}</p>
@@ -332,7 +307,6 @@ export default async function ArticlePage({ params }) {
             </div>
           )}
 
-          {/* Sections */}
           {sections.map((section, si) => {
             if (section.type === 'intro') return null
             const isSteps    = /^steps?$/i.test(section.heading)
@@ -348,12 +322,10 @@ export default async function ArticlePage({ params }) {
                   {sectionLabel}
                 </h2>
 
-                {/* Inline section content */}
                 {section.lines.length > 0 && !isFaq && (
                   <div dangerouslySetInnerHTML={{ __html: renderLines(section.lines) }} />
                 )}
 
-                {/* Step cards */}
                 {isSteps && steps.map((step, i) => (
                   <div key={i} id={step.id} style={{ border: '0.5px solid var(--border)', borderRadius: '12px', padding: '16px 18px', marginBottom: '12px', background: 'var(--card-bg)' }}>
                     <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
@@ -367,26 +339,22 @@ export default async function ArticlePage({ params }) {
                         <div dangerouslySetInnerHTML={{ __html: renderLines(step.lines) }} />
                       </div>
                     </div>
-                    {/* AD #2 after step 3 */}
                     {i === 2 && <AdSlot slot="0987654321" label={t.adLabel} />}
                   </div>
                 ))}
 
-                {/* Tips styled */}
                 {isTips && (
                   <div style={{ background: 'rgba(255, 248, 220, 0.6)', border: '0.5px solid #e6c97a', borderRadius: '12px', padding: '16px 18px' }}>
                     <div dangerouslySetInnerHTML={{ __html: renderLines(section.lines) }} />
                   </div>
                 )}
 
-                {/* Warnings styled */}
                 {isWarnings && (
                   <div style={{ background: 'rgba(255, 235, 205, 0.6)', border: '0.5px solid #e69a4a', borderRadius: '12px', padding: '16px 18px' }}>
                     <div dangerouslySetInnerHTML={{ __html: renderLines(section.lines) }} />
                   </div>
                 )}
 
-                {/* FAQ */}
                 {isFaq && (
                   <div>
                     {faqs.map((faq, fi) => (
@@ -398,16 +366,13 @@ export default async function ArticlePage({ params }) {
                   </div>
                 )}
 
-                {/* AD #3 after Tips */}
                 {isTips && <AdSlot slot="1122334455" label={t.adLabel} />}
               </section>
             )
           })}
 
-          {/* AD #4 — end of article */}
           <AdSlot slot="5544332211" label={t.adLabel} />
 
-          {/* Was this helpful + Share */}
           <div style={{ border: '0.5px solid var(--border)', borderRadius: '12px', padding: '20px', textAlign: 'center', marginBottom: '32px' }}>
             <p style={{ fontSize: '15px', fontWeight: 500, marginBottom: '14px', color: 'var(--text)' }}>{t.helpful}</p>
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '16px' }}>
@@ -421,9 +386,8 @@ export default async function ArticlePage({ params }) {
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
               <span style={{ fontSize: '13px', color: 'var(--text-secondary)', marginRight: '4px' }}>{t.share}:</span>
               {[['Facebook', 'f', `https://www.facebook.com/sharer/sharer.php?u=https://topplatz.com/${lang}/${articleSlug}`],
-                ['Twitter', 'X', `https://twitter.com/intent/tweet?url=https://topplatz.com/${lang}/${articleSlug}&text=${encodeURIComponent(fm.title)}`],
-                ['Print', '🖨', 'javascript:window.print()']].map(([name, icon, href]) => (
-                <a key={name} href={href} target={name !== 'Print' ? '_blank' : undefined} rel="noopener" aria-label={name}
+                ['Twitter', 'X', `https://twitter.com/intent/tweet?url=https://topplatz.com/${lang}/${articleSlug}&text=${encodeURIComponent(fm.title)}`]].map(([name, icon, href]) => (
+                <a key={name} href={href} target="_blank" rel="noopener" aria-label={name}
                   style={{ padding: '6px 14px', borderRadius: '6px', border: '0.5px solid var(--border)', background: 'var(--bg-secondary)', color: 'var(--text-secondary)', fontSize: '13px', textDecoration: 'none', display: 'inline-block' }}>
                   {icon}
                 </a>
@@ -432,10 +396,7 @@ export default async function ArticlePage({ params }) {
           </div>
         </main>
 
-        {/* Sidebar — desktop */}
         <aside className="article-sidebar" style={{ position: 'sticky', top: '80px' }}>
-
-          {/* TOC desktop */}
           {toc.length > 1 && (
             <div style={{ background: 'var(--bg-secondary)', border: '0.5px solid var(--border)', borderRadius: '12px', padding: '16px', marginBottom: '16px' }}>
               <p style={{ fontSize: '13px', fontWeight: 500, marginBottom: '12px', color: 'var(--text)' }}>📋 {t.contents}</p>
@@ -456,7 +417,6 @@ export default async function ArticlePage({ params }) {
             </div>
           )}
 
-          {/* Sidebar AD 300x600 */}
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '10px', color: 'var(--text-secondary)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t.adLabel}</p>
             <ins className="adsbygoogle"
@@ -469,7 +429,6 @@ export default async function ArticlePage({ params }) {
         </aside>
       </div>
 
-      {/* Related Articles */}
       {related.length > 0 && (
         <section style={{ marginTop: '16px', paddingTop: '28px', borderTop: '0.5px solid var(--border)' }}>
           <h2 style={{ fontSize: '18px', fontWeight: 500, marginBottom: '16px', color: 'var(--text)' }}>{t.related}</h2>
@@ -492,7 +451,6 @@ export default async function ArticlePage({ params }) {
         </section>
       )}
 
-      {/* Responsive styles */}
       <style>{`
         @media (max-width: 768px) {
           .article-layout { grid-template-columns: 1fr !important; }
@@ -502,9 +460,6 @@ export default async function ArticlePage({ params }) {
         @media (min-width: 769px) {
           .toc-mobile { display: none !important; }
           .article-sidebar { display: block !important; }
-        }
-        @media print {
-          .ad-slot, .article-sidebar, nav[aria-label="breadcrumb"] { display: none !important; }
         }
       `}</style>
     </div>
