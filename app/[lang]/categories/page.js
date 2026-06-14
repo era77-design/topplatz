@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import articlesData from '@/../public/articles-meta.json'
+import articlesData from '@/data/articles-meta.json'
 
 const LANGS = ['en', 'de', 'nl', 'sv']
 const CATEGORIES = [
