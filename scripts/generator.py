@@ -56,15 +56,19 @@ def score_photo_relevance(image_bytes, keyword):
             model='gemini-2.5-flash',
             contents=[
                 types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
-                f'Rate how well this image illustrates a how-to article about '
-                f'"{keyword}". Consider whether it shows the actual subject, '
-                f'action, tool, or result described. '
+                f'You are picking a header photo for a how-to article about '
+                f'"{keyword}". On a scale of 1-10, rate how SUITABLE this image '
+                f'is as that header photo. A generic but topically-related stock '
+                f'photo (showing the right object, setting, or activity) should '
+                f'score 6-8. Reserve 9-10 for an excellent, specific match. '
+                f'Only score below 4 if the image is about something clearly '
+                f'unrelated to the topic. '
                 f'Reply with ONLY a single integer from 1 to 10, nothing else.'
             ],
             config=types.GenerateContentConfig(
                 temperature=0,
-                max_output_tokens=20,
-                thinking_config=types.ThinkingConfig(thinking_budget=0)
+                max_output_tokens=50,
+                thinking_config=types.ThinkingConfig(thinking_budget=256)
             )
         )
         text = response.text
