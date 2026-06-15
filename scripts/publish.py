@@ -2,18 +2,22 @@ import os
 import json
 import sqlite3
 from pathlib import Path
+from datetime import datetime
 
 # ==========================================
 # ПУТИ — всё относительно корня topplatz/
-# (скрипт лежит в topplatz/scripts/, поэтому .parent.parent)
 # ==========================================
 
 ROOT        = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / 'content'
 META_FILE   = ROOT / 'data' / 'articles-meta.json'
 DB_PATH     = ROOT / 'keywords.db'
+SITEMAP     = ROOT / 'public' / 'sitemap.xml'
 
-LANGS = ['en', 'de', 'nl', 'sv']
+LANGS  = ['en', 'de', 'nl', 'sv']
+DOMAIN = 'https://topplatz.com'
+
+CATEGORIES = ['home-garden', 'kitchen-food', 'tech-devices', 'diy-crafts', 'general']
 
 # ==========================================
 # КАТЕГОРИЗАЦИЯ
@@ -96,7 +100,61 @@ def build_index():
 
     total = sum(len(v) for v in articles_by_lang.values())
     print(f'\n📋 Индекс обновлён: {total} статей → data/articles-meta.json')
-    return total
+    return articles_by_lang, total
+
+# ==========================================
+# ГЕНЕРАЦИЯ sitemap.xml
+# ==========================================
+
+def build_sitemap(articles_by_lang):
+    today = datetime.now().strftime('%Y-%m-%d')
+    urls = []
+
+    def add(loc, lastmod, changefreq, priority):
+        urls.append(
+            f'  <url>\n'
+            f'    <loc>{DOMAIN}{loc}</loc>\n'
+            f'    <lastmod>{lastmod}</lastmod>\n'
+            f'    <changefreq>{changefreq}</changefreq>\n'
+            f'    <priority>{priority}</priority>\n'
+            f'  </url>'
+        )
+
+    for lang in LANGS:
+        articles = articles_by_lang.get(lang, [])
+
+        # Главная
+        add(f'/{lang}', today, 'daily', '1.0')
+
+        # Статические страницы
+        for page, prio in [('about', '0.3'), ('contact', '0.3'), ('privacy', '0.2')]:
+            add(f'/{lang}/{page}', today, 'monthly', prio)
+
+        # Категории — только если есть статьи
+        if articles:
+            add(f'/{lang}/categories', today, 'weekly', '0.5')
+            present_cats = {a['category'] for a in articles}
+            for cat in CATEGORIES:
+                if cat in present_cats:
+                    add(f'/{lang}/category/{cat}', today, 'weekly', '0.6')
+
+        # Статьи
+        for a in articles:
+            lastmod = a.get('createdAt') or today
+            add(f'/{lang}/{a["slug"]}', lastmod, 'monthly', '0.8')
+
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + '\n'.join(urls) + '\n'
+        '</urlset>\n'
+    )
+
+    SITEMAP.parent.mkdir(parents=True, exist_ok=True)
+    with open(SITEMAP, 'w', encoding='utf-8') as f:
+        f.write(xml)
+
+    print(f'🗺️  Sitemap: {len(urls)} URL → public/sitemap.xml')
 
 # ==========================================
 # GIT PUSH
@@ -105,8 +163,8 @@ def build_index():
 def git_push(total):
     print('\n🚀 Пушим изменения...')
     os.chdir(ROOT)
-    os.system('git add content/ data/articles-meta.json')
-    os.system(f'git commit -m "publish: {total} articles in index"')
+    os.system('git add content/ data/articles-meta.json public/sitemap.xml')
+    os.system(f'git commit -m "publish: {total} articles, update sitemap"')
     os.system('git push')
     print('✅ Готово! Cloudflare деплоит автоматически')
 
@@ -136,6 +194,7 @@ if __name__ == '__main__':
     print('📤 TopPlatz — Публикация')
     print('=' * 35)
     print(f'ROOT: {ROOT}\n')
-    total = build_index()
+    articles_by_lang, total = build_index()
+    build_sitemap(articles_by_lang)
     git_push(total)
     show_stats()

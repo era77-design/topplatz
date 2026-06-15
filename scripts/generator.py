@@ -23,6 +23,7 @@ UNSPLASH_KEY     = os.getenv('UNSPLASH_KEY')
 DB_PATH          = ROOT / 'keywords.db'
 CONTENT_DIR      = ROOT / 'content'
 ARTICLES_PER_RUN = int(os.getenv('ARTICLES_PER_RUN', 5))
+PHOTO_CANDIDATES = int(os.getenv('PHOTO_CANDIDATES', 5))
 
 # ==========================================
 # ПРОВЕРКА КЛЮЧЕЙ
@@ -45,28 +46,70 @@ def init_client():
     client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
-# UNSPLASH — подбор фото
+# GEMINI VISION — оценка релевантности фото
 # ==========================================
 
-def get_photo(query):
+def score_photo_relevance(image_bytes, keyword):
+    """Просит Gemini оценить 1-10, насколько фото подходит к теме статьи."""
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=[
+                types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
+                f'Rate how well this image illustrates a how-to article about '
+                f'"{keyword}". Consider whether it shows the actual subject, '
+                f'action, tool, or result described. '
+                f'Reply with ONLY a single integer from 1 to 10, nothing else.'
+            ],
+            config=types.GenerateContentConfig(temperature=0, max_output_tokens=10)
+        )
+        match = re.search(r'\d+', response.text)
+        return int(match.group()) if match else 5
+    except Exception as e:
+        print(f'      ⚠️  Vision: {e}')
+        return 5  # нейтральный балл при ошибке — не блокирует выбор
+
+# ==========================================
+# UNSPLASH — подбор фото с проверкой релевантности
+# ==========================================
+
+def get_photo(query, keyword):
     try:
         resp = requests.get(
             'https://api.unsplash.com/search/photos',
-            params={'query': query, 'per_page': 1, 'orientation': 'landscape', 'content_filter': 'high'},
+            params={'query': query, 'per_page': PHOTO_CANDIDATES, 'orientation': 'landscape', 'content_filter': 'high'},
             headers={'Authorization': f'Client-ID {UNSPLASH_KEY}'},
             timeout=10
         )
         results = resp.json().get('results', [])
         if not results:
             return None
-        photo = results[0]
+
+        if len(results) == 1:
+            best = results[0]
+        else:
+            scored = []
+            for photo in results:
+                try:
+                    img_bytes = requests.get(photo['urls']['small'], timeout=10).content
+                    score = score_photo_relevance(img_bytes, keyword)
+                except Exception:
+                    score = 5
+                scored.append((score, photo))
+                time.sleep(0.5)
+
+            scored.sort(key=lambda x: -x[0])
+            best_score, best = scored[0]
+            scores_str = ', '.join(str(s) for s, _ in scored)
+            print(f'      🎯 Релевантность: [{scores_str}] → выбрано {best_score}/10')
+
         return {
-            'url':          photo['urls']['regular'],
-            'url_small':    photo['urls']['small'],
-            'alt':          photo.get('alt_description') or query,
-            'author_name':  photo['user']['name'],
-            'author_url':   photo['user']['links']['html'],
-            'unsplash_url': photo['links']['html'],
+            'url':          best['urls']['regular'],
+            'url_small':    best['urls']['small'],
+            'alt':          best.get('alt_description') or query,
+            'author_name':  best['user']['name'],
+            'author_url':   best['user']['links']['html'],
+            'unsplash_url': best['links']['html'],
         }
     except Exception as e:
         print(f'  ⚠️  Unsplash: {e}')
@@ -148,7 +191,7 @@ def generate_article(keyword, lang):
         return None
 
 # ==========================================
-# СОХРАНЕНИЕ В MDX — теперь прямо в topplatz/content/
+# СОХРАНЕНИЕ В MDX — прямо в topplatz/content/
 # ==========================================
 
 def save_as_mdx(article, keyword, lang, slug, photo):
@@ -253,7 +296,7 @@ def run_generator(lang=None, limit=None):
         if article:
             photo_query = article.get('photo_query', keyword)
             print(f'   🖼️  Фото: "{photo_query}"')
-            photo = get_photo(photo_query)
+            photo = get_photo(photo_query, keyword)
             print(f'   📸 {photo["author_name"] if photo else "не найдено"}')
             slug = re.sub(r'[^a-z0-9\-]', '', article.get('slug', keyword.lower().replace(' ', '-')))[:60]
             filepath = save_as_mdx(article, keyword, kw_lang, slug, photo)
@@ -272,8 +315,8 @@ def run_generator(lang=None, limit=None):
 # ==========================================
 
 if __name__ == '__main__':
-    print('🤖 TopPlatz — Генератор контента (Gemini + Unsplash)')
-    print('=' * 52)
+    print('🤖 TopPlatz — Генератор контента (Gemini + Unsplash + Vision)')
+    print('=' * 60)
     check_config()
     init_client()
     run_generator(lang='en', limit=ARTICLES_PER_RUN)
