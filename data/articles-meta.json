@@ -1,6 +1,62 @@
 {
   "en": [
     {
+      "slug": "how-to-clean-washing-machine",
+      "title": "How to Clean Your Washing Machine for Fresh Laundry",
+      "description": "Learn how to easily clean your washing machine with simple household ingredients. Remove odors, mold, and residue for cleaner clothes and a longer-lasting appliance.",
+      "photoUrl": "https://images.unsplash.com/photo-1761079976271-3a78f547ca67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHdhc2hpbmclMjBtYWNoaW5lJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc4MTU0NjA1N3ww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "Inside view of a clean, empty washing machine drum.",
+      "photoAuthor": "Vlad Deep",
+      "photoUnsplash": "https://unsplash.com/photos/inside-view-of-a-clean-empty-washing-machine-drum-ykivphUagM4",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how to clean washing machine"
+    },
+    {
+      "slug": "how-to-install-smoke-detector",
+      "title": "How to Install a Smoke Detector for Home Safety",
+      "description": "Learn how to easily install a smoke detector in your home to enhance safety and provide early warning in case of fire. Quick and simple DIY guide.",
+      "photoUrl": "https://images.unsplash.com/photo-1665655034446-1536f6de3fe6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxzbW9rZSUyMGRldGVjdG9yJTIwaW5zdGFsbGF0aW9ufGVufDF8MHx8fDE3ODE1NDYwMzh8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a light bulb on a table",
+      "photoAuthor": "Yosuke Ota",
+      "photoUnsplash": "https://unsplash.com/photos/a-light-bulb-on-a-table-2uyCMNGYhnM",
+      "category": "tech-devices",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how to install"
+    },
+    {
+      "slug": "how-to-delete-page-word",
+      "title": "How to Delete a Page in Word Easily",
+      "description": "Learn how to delete a page in Microsoft Word, whether it's a blank page, one with content, or an extra page caused by hidden formatting or section breaks.",
+      "photoUrl": "https://images.unsplash.com/photo-1636797581198-1bb1f2d961b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxldGUlMjBwYWdlJTIwd29yZCUyMGRvY3VtZW50fGVufDF8MHx8fDE3ODE1NDYwMTl8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "text",
+      "photoAuthor": "Finn Mund",
+      "photoUnsplash": "https://unsplash.com/photos/text-8q2r2XQpDO0",
+      "category": "tech-devices",
+      "timeMinutes": 10,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how do i delete a page in word"
+    },
+    {
+      "slug": "how-to-fix-leaky-faucet-diy",
+      "title": "How to Fix a Leaky Faucet DIY Guide",
+      "description": "Stop annoying drips and save water by learning how to fix a leaky faucet yourself. This step-by-step DIY guide helps you identify and replace common worn parts quickly and safely.",
+      "photoUrl": "https://images.unsplash.com/photo-1521207418485-99c705420785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxsZWFreSUyMGZhdWNldCUyMHJlcGFpcnxlbnwxfDB8fHwxNzgxNTQ1OTgyfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a faucet running water from a kitchen sink",
+      "photoAuthor": "Imani",
+      "photoUnsplash": "https://unsplash.com/photos/a-faucet-running-water-from-a-kitchen-sink-vDQ-e3RtaoE",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how can i fix"
+    },
+    {
       "slug": "how-to-fix-wobbly-chair",
       "title": "How to Fix a Wobbly Chair: Simple DIY Guide",
       "description": "Learn how to fix a wobbly chair quickly and easily with this step-by-step guide. Restore stability to your furniture and prevent further damage.",
