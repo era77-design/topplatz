@@ -61,9 +61,16 @@ def score_photo_relevance(image_bytes, keyword):
                 f'action, tool, or result described. '
                 f'Reply with ONLY a single integer from 1 to 10, nothing else.'
             ],
-            config=types.GenerateContentConfig(temperature=0, max_output_tokens=10)
+            config=types.GenerateContentConfig(
+                temperature=0,
+                max_output_tokens=20,
+                thinking_config=types.ThinkingConfig(thinking_budget=0)
+            )
         )
-        match = re.search(r'\d+', response.text)
+        text = response.text
+        if not text:
+            return 5
+        match = re.search(r'\d+', text)
         return int(match.group()) if match else 5
     except Exception as e:
         print(f'      ⚠️  Vision: {e}')
