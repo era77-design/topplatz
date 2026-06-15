@@ -1,9 +1,51 @@
 {
   "en": [
     {
+      "slug": "how-to-clean-out-washing-machine",
+      "title": "How to Clean Your Washing Machine: A Deep Clean Guide",
+      "description": "Keep your washing machine fresh and efficient. Learn how to deep clean your appliance with simple steps, removing mold, mildew, and detergent buildup for better laundry results.",
+      "photoUrl": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwbWFjaGluZSUyMGNsZWFuaW5nJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc4MTU1NDA4MHww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a washer and dryer in a room",
+      "photoAuthor": "PlanetCare",
+      "photoUnsplash": "https://unsplash.com/photos/a-washer-and-dryer-in-a-room-23coWmkTNSg",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how to clean out washing machine"
+    },
+    {
+      "slug": "how-to-clean-laundry-machine",
+      "title": "How to Clean Your Laundry Machine for Fresher Clothes",
+      "description": "Learn how to effectively clean your washing machine, removing mold, mildew, and detergent buildup for fresher laundry results. Easy steps for top-loaders and front-loaders.",
+      "photoUrl": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHdhc2hpbmclMjBtYWNoaW5lfGVufDF8MHx8fDE3ODE1NTQwNjF8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a washer and dryer in a room",
+      "photoAuthor": "PlanetCare",
+      "photoUnsplash": "https://unsplash.com/photos/a-washer-and-dryer-in-a-room-23coWmkTNSg",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how to clean laundry machine"
+    },
+    {
+      "slug": "how-to-clean-a-washing-machine",
+      "title": "How to Clean Your Washing Machine Effectively",
+      "description": "Learn how to clean a washing machine using natural ingredients like vinegar and baking soda. Eliminate odors, remove residue, and maintain freshness with this easy guide.",
+      "photoUrl": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwbWFjaGluZSUyMGNsZWFuaW5nJTIwc3VwcGxpZXN8ZW58MXwwfHx8MTc4MTU1NDA0MXww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a washer and dryer in a room",
+      "photoAuthor": "PlanetCare",
+      "photoUnsplash": "https://unsplash.com/photos/a-washer-and-dryer-in-a-room-23coWmkTNSg",
+      "category": "home-garden",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how do you clean a washing machine"
+    },
+    {
       "slug": "how-to-clean-washing-machine",
-      "title": "How to Clean Your Washing Machine for Fresh Laundry",
-      "description": "Learn how to easily clean your washing machine with simple household ingredients. Remove odors, mold, and residue for cleaner clothes and a longer-lasting appliance.",
+      "title": "How to Clean Your Washer for Fresh Laundry",
+      "description": "Learn how to effectively clean your washing machine, both front-load and top-load, to eliminate odors, mold, and residue for cleaner, fresher laundry.",
       "photoUrl": "https://images.unsplash.com/photo-1761079976271-3a78f547ca67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHdhc2hpbmclMjBtYWNoaW5lJTIwaW50ZXJpb3J8ZW58MXwwfHx8MTc4MTU0NjA1N3ww&ixlib=rb-4.1.0&q=80&w=400",
       "photoAlt": "Inside view of a clean, empty washing machine drum.",
       "photoAuthor": "Vlad Deep",
@@ -12,7 +54,21 @@
       "timeMinutes": 30,
       "difficulty": "Easy",
       "createdAt": "2026-06-15",
-      "keyword": "how to clean washing machine"
+      "keyword": "how to clean washer"
+    },
+    {
+      "slug": "how-to-remove-gel-nail-polish",
+      "title": "How to Safely Remove Gel Nail Polish at Home",
+      "description": "Learn how to safely remove gel nail polish at home using common supplies. Protect your natural nails from damage with our step-by-step guide.",
+      "photoUrl": "https://images.unsplash.com/photo-1779636198585-658170ee0283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxnZWwlMjBwb2xpc2glMjByZW1vdmFsJTIwa2l0fGVufDF8MHx8fDE3ODE1NTQwMDJ8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "Manicure and pedicure tools on a blue towel.",
+      "photoAuthor": "Ksenia Pixelesse",
+      "photoUnsplash": "https://unsplash.com/photos/manicure-and-pedicure-tools-on-a-blue-towel-jCp9zt87NWo",
+      "category": "general",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how to remove gel nail polish"
     },
     {
       "slug": "how-to-install-smoke-detector",
