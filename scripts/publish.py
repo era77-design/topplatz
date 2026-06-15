@@ -163,7 +163,7 @@ def build_sitemap(articles_by_lang):
 def git_push(total):
     print('\n🚀 Пушим изменения...')
     os.chdir(ROOT)
-    os.system('git add content/ data/articles-meta.json public/sitemap.xml')
+    os.system('git add content/ data/articles-meta.json data/used-photos.json public/sitemap.xml')
     os.system(f'git commit -m "publish: {total} articles, update sitemap"')
     os.system('git push')
     print('✅ Готово! Cloudflare деплоит автоматически')

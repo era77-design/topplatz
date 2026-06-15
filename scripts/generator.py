@@ -22,6 +22,7 @@ GEMINI_API_KEY   = os.getenv('GEMINI_API_KEY')
 UNSPLASH_KEY     = os.getenv('UNSPLASH_KEY')
 DB_PATH          = ROOT / 'keywords.db'
 CONTENT_DIR      = ROOT / 'content'
+USED_PHOTOS_FILE = ROOT / 'data' / 'used-photos.json'
 ARTICLES_PER_RUN = int(os.getenv('ARTICLES_PER_RUN', 5))
 PHOTO_CANDIDATES = int(os.getenv('PHOTO_CANDIDATES', 5))
 
@@ -44,6 +45,26 @@ client = None
 def init_client():
     global client
     client = genai.Client(api_key=GEMINI_API_KEY)
+
+# ==========================================
+# ТРЕКИНГ УЖЕ ИСПОЛЬЗОВАННЫХ ФОТО
+# (переживает между запусками — data/used-photos.json)
+# ==========================================
+
+def load_used_photos():
+    if USED_PHOTOS_FILE.exists():
+        try:
+            return set(json.loads(USED_PHOTOS_FILE.read_text(encoding='utf-8')))
+        except Exception:
+            return set()
+    return set()
+
+def save_used_photos(used_ids):
+    USED_PHOTOS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    USED_PHOTOS_FILE.write_text(
+        json.dumps(sorted(used_ids), ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
 
 # ==========================================
 # GEMINI VISION — оценка релевантности фото
@@ -84,7 +105,7 @@ def score_photo_relevance(image_bytes, keyword):
 # UNSPLASH — подбор фото с проверкой релевантности
 # ==========================================
 
-def get_photo(query, keyword):
+def get_photo(query, keyword, used_photo_ids):
     try:
         resp = requests.get(
             'https://api.unsplash.com/search/photos',
@@ -110,9 +131,18 @@ def get_photo(query, keyword):
                 time.sleep(0.5)
 
             scored.sort(key=lambda x: -x[0])
-            best_score, best = scored[0]
+
+            # Предпочитаем фото, которые ещё не использовались в других статьях,
+            # даже если их оценка релевантности немного ниже
+            unused = [s for s in scored if s[1]['id'] not in used_photo_ids]
+            chosen = unused if unused else scored
+
+            best_score, best = chosen[0]
             scores_str = ', '.join(str(s) for s, _ in scored)
-            print(f'      🎯 Релевантность: [{scores_str}] → выбрано {best_score}/10')
+            note = '' if unused else ' (все уже использованы — берём лучший повтор)'
+            print(f'      🎯 Релевантность: [{scores_str}] → выбрано {best_score}/10{note}')
+
+        used_photo_ids.add(best['id'])
 
         return {
             'url':          best['urls']['regular'],
@@ -298,7 +328,10 @@ def run_generator(lang=None, limit=None):
     if not keywords:
         print('✅ Нет ключевиков для генерации')
         return
-    print(f'\n🚀 Генерируем {len(keywords)} статей...\n')
+
+    used_photo_ids = load_used_photos()
+    print(f'\n🚀 Генерируем {len(keywords)} статей... (известно {len(used_photo_ids)} использованных фото)\n')
+
     success = errors = 0
     for keyword, kw_lang, searches, cpc in keywords:
         print(f'📝 [{kw_lang.upper()}] "{keyword}"')
@@ -307,7 +340,7 @@ def run_generator(lang=None, limit=None):
         if article:
             photo_query = article.get('photo_query', keyword)
             print(f'   🖼️  Фото: "{photo_query}"')
-            photo = get_photo(photo_query, keyword)
+            photo = get_photo(photo_query, keyword, used_photo_ids)
             print(f'   📸 {photo["author_name"] if photo else "не найдено"}')
             slug = re.sub(r'[^a-z0-9\-]', '', article.get('slug', keyword.lower().replace(' ', '-')))[:60]
             filepath = save_as_mdx(article, keyword, kw_lang, slug, photo)
@@ -318,6 +351,7 @@ def run_generator(lang=None, limit=None):
             update_status(keyword, kw_lang, 'error')
             print(f'   ❌ Ошибка')
             errors += 1
+        save_used_photos(used_photo_ids)
         time.sleep(2)
     print(f'\n🎉 Успешно: {success} | Ошибки: {errors}')
 
