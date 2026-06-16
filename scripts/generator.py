@@ -5,6 +5,8 @@ import json
 import time
 import re
 import requests
+import threading
+import queue
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -25,6 +27,37 @@ CONTENT_DIR      = ROOT / 'content'
 USED_PHOTOS_FILE = ROOT / 'data' / 'used-photos.json'
 ARTICLES_PER_RUN = int(os.getenv('ARTICLES_PER_RUN', 5))
 PHOTO_CANDIDATES = int(os.getenv('PHOTO_CANDIDATES', 5))
+
+# ==========================================
+# ЗАЩИТА ОТ ЗАВИСАНИЯ GEMINI API
+# ==========================================
+# Известный баг SDK google-genai: без явного таймаута запрос может
+# зависнуть НАВСЕГДА при сетевом сбое (timeout=None передаётся внутрь
+# httpx). HttpOptions(timeout=...) помогает, но не всегда срабатывает
+# надёжно — поэтому здесь ещё и свой watchdog на отдельном потоке: если
+# вызов не вернулся за N секунд, скрипт считает его проваленным и идёт
+# дальше, вместо того чтобы зависнуть на час.
+
+def call_with_timeout(fn, timeout_sec, *args, **kwargs):
+    result_queue = queue.Queue()
+
+    def target():
+        try:
+            result_queue.put(('ok', fn(*args, **kwargs)))
+        except Exception as e:
+            result_queue.put(('error', e))
+
+    thread = threading.Thread(target=target, daemon=True)
+    thread.start()
+    thread.join(timeout=timeout_sec)
+
+    if thread.is_alive():
+        raise TimeoutError(f'не вернулся за {timeout_sec} сек')
+
+    status, value = result_queue.get()
+    if status == 'error':
+        raise value
+    return value
 
 # ==========================================
 # ПРОВЕРКА КЛЮЧЕЙ
@@ -73,7 +106,9 @@ def save_used_photos(used_ids):
 def score_photo_relevance(image_bytes, keyword):
     """Просит Gemini оценить 1-10, насколько фото подходит к теме статьи."""
     try:
-        response = client.models.generate_content(
+        response = call_with_timeout(
+            client.models.generate_content,
+            25,  # сек — это быстрый вызов, 25 сек более чем достаточно
             model='gemini-2.5-flash',
             contents=[
                 types.Part.from_bytes(data=image_bytes, mime_type='image/jpeg'),
@@ -89,7 +124,8 @@ def score_photo_relevance(image_bytes, keyword):
             config=types.GenerateContentConfig(
                 temperature=0,
                 max_output_tokens=50,
-                thinking_config=types.ThinkingConfig(thinking_budget=256)
+                thinking_config=types.ThinkingConfig(thinking_budget=256),
+                http_options=types.HttpOptions(timeout=20000)
             )
         )
         text = response.text
@@ -97,6 +133,9 @@ def score_photo_relevance(image_bytes, keyword):
             return 5
         match = re.search(r'\d+', text)
         return int(match.group()) if match else 5
+    except TimeoutError as e:
+        print(f'      ⏱️  Vision таймаут ({e}) — нейтральный балл')
+        return 5
     except Exception as e:
         print(f'      ⚠️  Vision: {e}')
         return 5  # нейтральный балл при ошибке — не блокирует выбор
@@ -160,14 +199,27 @@ def get_photo(query, keyword, used_photo_ids):
 # ПРОМПТ
 # ==========================================
 
-def build_prompt(keyword, lang):
+def build_prompt(keyword, lang, related_phrases=None):
     lang_names = {'en': 'English', 'de': 'German', 'nl': 'Dutch', 'sv': 'Swedish'}
     lang_name = lang_names.get(lang, 'English')
+
+    related_section = ''
+    if related_phrases:
+        phrases_list = '\n'.join(f'- "{p}"' for p in related_phrases[:8])
+        related_section = f"""
+People also search for this same topic using these phrasings:
+{phrases_list}
+
+Naturally work 2-4 of these (verbatim or near-verbatim) in as FAQ questions,
+so the article matches multiple ways people ask this. Don't force all of them —
+only the ones that make sense as genuine, distinct questions.
+"""
+
     return f"""You are an expert how-to content writer.
 
 Keyword: "{keyword}"
 Language: {lang_name}
-
+{related_section}
 RULES:
 - Write ONLY in {lang_name}
 - Be practical and safe
@@ -216,14 +268,23 @@ def fix_json(text):
 # ГЕНЕРАЦИЯ СТАТЬИ
 # ==========================================
 
-def generate_article(keyword, lang):
+def generate_article(keyword, lang, related_phrases=None):
     try:
-        response = client.models.generate_content(
+        response = call_with_timeout(
+            client.models.generate_content,
+            90,  # сек — этот вызов сложнее и дольше, даём больше запаса
             model='gemini-2.5-flash',
-            contents=build_prompt(keyword, lang),
-            config=types.GenerateContentConfig(temperature=0.7, max_output_tokens=8192)
+            contents=build_prompt(keyword, lang, related_phrases),
+            config=types.GenerateContentConfig(
+                temperature=0.7,
+                max_output_tokens=8192,
+                http_options=types.HttpOptions(timeout=60000)
+            )
         )
         return json.loads(fix_json(response.text.strip()))
+    except TimeoutError as e:
+        print(f'  ⏱️  Таймаут генерации ({e})')
+        return None
     except json.JSONDecodeError as e:
         print(f'  ⚠️  JSON ошибка: {e}')
         return None
@@ -310,12 +371,20 @@ def update_status(keyword, lang, status):
 def get_pending_keywords(lang=None, limit=5):
     conn = sqlite3.connect(str(DB_PATH))
     c = conn.cursor()
+
+    c.execute("PRAGMA table_info(keywords)")
+    has_related = any(row[1] == 'related_phrases' for row in c.fetchall())
+    cols = 'keyword, lang, avg_searches, cpc_high' + (', related_phrases' if has_related else '')
+
     if lang:
-        c.execute('SELECT keyword, lang, avg_searches, cpc_high FROM keywords WHERE status="pending" AND lang=? ORDER BY avg_searches DESC LIMIT ?', (lang, limit))
+        c.execute(f'SELECT {cols} FROM keywords WHERE status="pending" AND lang=? ORDER BY avg_searches DESC LIMIT ?', (lang, limit))
     else:
-        c.execute('SELECT keyword, lang, avg_searches, cpc_high FROM keywords WHERE status="pending" ORDER BY avg_searches DESC LIMIT ?', (limit,))
+        c.execute(f'SELECT {cols} FROM keywords WHERE status="pending" ORDER BY avg_searches DESC LIMIT ?', (limit,))
     rows = c.fetchall()
     conn.close()
+
+    if not has_related:
+        rows = [r + (None,) for r in rows]
     return rows
 
 # ==========================================
@@ -333,10 +402,13 @@ def run_generator(lang=None, limit=None):
     print(f'\n🚀 Генерируем {len(keywords)} статей... (известно {len(used_photo_ids)} использованных фото)\n')
 
     success = errors = 0
-    for keyword, kw_lang, searches, cpc in keywords:
+    for keyword, kw_lang, searches, cpc, related_json in keywords:
         print(f'📝 [{kw_lang.upper()}] "{keyword}"')
         print(f'   Поисков: {searches:,} | CPC: ${cpc:.2f}')
-        article = generate_article(keyword, kw_lang)
+        related_phrases = json.loads(related_json) if related_json else []
+        if related_phrases:
+            print(f'   🔗 +{len(related_phrases)} похожих формулировок → войдут в FAQ')
+        article = generate_article(keyword, kw_lang, related_phrases)
         if article:
             photo_query = article.get('photo_query', keyword)
             print(f'   🖼️  Фото: "{photo_query}"')
