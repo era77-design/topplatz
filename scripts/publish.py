@@ -183,7 +183,10 @@ def show_stats():
         done = c.fetchone()[0]
         c.execute('SELECT COUNT(*) FROM keywords WHERE lang=? AND status="pending"', (lang,))
         pending = c.fetchone()[0]
-        print(f'   {lang.upper()}: ✅ {done} опубликовано | ⏳ {pending} в очереди')
+        c.execute('SELECT COUNT(*) FROM keywords WHERE lang=? AND status="duplicate"', (lang,))
+        duplicate = c.fetchone()[0]
+        dup_str = f' | 🔗 {duplicate} дублей пропущено' if duplicate else ''
+        print(f'   {lang.upper()}: ✅ {done} опубликовано | ⏳ {pending} в очереди{dup_str}')
     conn.close()
 
 # ==========================================
