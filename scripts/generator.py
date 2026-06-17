@@ -4,6 +4,7 @@ import sqlite3
 import json
 import time
 import re
+import sys
 import requests
 import threading
 import queue
@@ -432,8 +433,15 @@ def run_generator(lang=None, limit=None):
 # ==========================================
 
 if __name__ == '__main__':
+    SUPPORTED_LANGS = ('en', 'de', 'nl', 'sv')
+    lang_arg = sys.argv[1].lower() if len(sys.argv) > 1 else 'en'
+    if lang_arg not in SUPPORTED_LANGS:
+        print(f'⚠️  Неизвестный язык "{lang_arg}", поддерживаются: {", ".join(SUPPORTED_LANGS)}. Использую en.')
+        lang_arg = 'en'
+
     print('🤖 TopPlatz — Генератор контента (Gemini + Unsplash + Vision)')
+    print(f'   Язык: {lang_arg.upper()}')
     print('=' * 60)
     check_config()
     init_client()
-    run_generator(lang='en', limit=ARTICLES_PER_RUN)
+    run_generator(lang=lang_arg, limit=ARTICLES_PER_RUN)

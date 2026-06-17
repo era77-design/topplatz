@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import sqlite3
 from pathlib import Path
 from datetime import datetime
@@ -20,19 +21,156 @@ DOMAIN = 'https://topplatz.com'
 CATEGORIES = ['home-garden', 'kitchen-food', 'tech-devices', 'diy-crafts', 'general']
 
 # ==========================================
-# КАТЕГОРИЗАЦИЯ
+# КАТЕГОРИЗАЦИЯ — EN/DE/NL/SV
 # ==========================================
+# ВАЖНО: сравнение по ЦЕЛЫМ СЛОВАМ (\b...\b), не по подстроке — иначе
+# 'eat' находится внутри "create", 'mac' — внутри "machine", и т.п.
+#
+# Порядок проверки: сначала узкие/специфичные категории (tech, kitchen),
+# потом home-garden — у неё самые общие слова ('fix','build'), и если
+# проверять её первой, она "съедает" чужие темы.
+#
+# 'grow' и 'clean' (и их переводы) слишком неоднозначны сами по себе
+# (рост человека vs растения; чистка чего угодно), поэтому для них
+# требуется слово-напарник по теме рядом — иначе они не считаются.
+#
+# DE/NL/SV переводы — best-effort (не проверены носителем языка),
+# покрывают основной словарь, но не претендуют на полноту. После первых
+# сгенерированных статей стоит свериться глазами и подправить списки.
+#
+# Множественное число: для EN допускается окончание -s/-es (gnat/gnats).
+# Для DE/NL/SV это НЕ включено — склонения там устроены сложнее простого
+# суффикса (умляуты, классы склонения и т.п.), сравниваем только базовую
+# форму слова. Известное ограничение v1.
 
-def detect_category(keyword='', slug=''):
+def _has_word(text, word, lang='en'):
+    if lang == 'en':
+        # точное слово + опциональное -s/-es (gnat/gnats, pan/pans...)
+        pattern = r'\b' + re.escape(word) + r'(e?s)?\b'
+    else:
+        # DE/NL/SV: сравниваем как ОСНОВУ (префикс) — компенсирует
+        # спряжения/склонения (kochen->kocht, Kartoffel->Kartoffeln),
+        # которые устроены сложнее простого английского -s. Левая \b
+        # гарантирует совпадение только с НАЧАЛА слова (не подстрокой
+        # внутри другого слова), а дальше разрешаем любое окончание.
+        pattern = r'\b' + re.escape(word) + r'\w*'
+    return re.search(pattern, text) is not None
+
+def _has_any(text, words, lang='en'):
+    return any(_has_word(text, w, lang) for w in words)
+
+TECH_WORDS = {
+    'en': ['install', 'tech', 'computer', 'phone', 'wifi', 'software', 'app',
+           'delete', 'account', 'facebook', 'instagram', 'chrome', 'node',
+           'windows', 'android', 'ios', 'internet', 'mac', 'gmail', 'email',
+           'browser', 'password', 'tv', 'screen', 'laptop', 'tablet', 'router',
+           'bluetooth', 'printer', 'telegram'],
+    'de': ['konto', 'lösch', 'facebook', 'instagram', 'handy', 'computer',
+           'telefon', 'wlan', 'software', 'app', 'chrome', 'windows', 'android',
+           'internet', 'email', 'passwort', 'browser', 'drucker', 'gmail'],
+    'nl': ['account', 'verwijder', 'facebook', 'instagram', 'telefoon',
+           'computer', 'wifi', 'software', 'app', 'chrome', 'windows', 'android',
+           'internet', 'email', 'wachtwoord', 'browser', 'printer', 'gmail'],
+    'sv': ['konto', 'radera', 'facebook', 'instagram', 'telefon', 'dator',
+           'wifi', 'programvara', 'app', 'chrome', 'windows', 'android',
+           'internet', 'mejl', 'lösenord', 'webbläsare', 'skrivare', 'gmail'],
+}
+
+KITCHEN_WORDS = {
+    'en': ['cook', 'recipe', 'food', 'kitchen', 'bake', 'meal', 'dish',
+           'ingredient', 'eat', 'drink', 'coffee', 'tea', 'sauce',
+           'dishwasher', 'microwave', 'oven', 'fridge', 'refrigerator',
+           'pan', 'pot', 'stove', 'blender', 'toaster'],
+    'de': ['koch', 'rezept', 'essen', 'küche', 'back', 'kaffee', 'tee',
+           'geschirrspüler', 'mikrowelle', 'ofen', 'kühlschrank', 'pfanne', 'topf'],
+    # 'koken'/'kook' и 'bakken'/'bak' нужны ОБА — нидерландское удвоение
+    # гласной в открытом слоге (koken -> ik kook) ломает простое
+    # префиксное совпадение в обе стороны
+    'nl': ['koken', 'kook', 'recept', 'eten', 'keuken',
+           'bakken', 'bak', 'koffie', 'thee',
+           'vaatwasser', 'magnetron', 'oven', 'koelkast', 'pan'],
+    'sv': ['laga', 'koka', 'recept', 'mat', 'kök', 'baka', 'kaffe', 'te',
+           'diskmaskin', 'mikrovågsugn', 'ugn', 'kylskåp', 'panna'],
+}
+
+HOME_GARDEN_WORDS = {
+    'en': ['garden', 'house', 'door', 'pipe', 'leak', 'wobbly', 'wood', 'paint',
+           'bed bug', 'pest', 'lawn', 'plant', 'mold', 'mildew', 'flea', 'gnat',
+           'tick', 'mosquito', 'mouse', 'mice', 'roach', 'cockroach', 'spider',
+           'wasp', 'bee', 'rat', 'moth', 'termite', 'weed', 'gutter', 'roof',
+           'fence', 'deck', 'patio', 'garage', 'fix', 'repair', 'build'],
+    # 'reparier'/'bau' — основы глаголов (не полный инфинитив), чтобы
+    # ловить и 'reparieren', и 'repariert'/'reparierst' одним совпадением
+    'de': ['garten', 'haus', 'tür', 'rohr', 'leck', 'holz', 'farbe', 'mal',
+           'schädling', 'rasen', 'pflanze', 'schimmel', 'floh', 'zecke',
+           'maus', 'ratte', 'reparier', 'bau'],
+    # 'repar'/'bouw' — то же самое для нидерландского
+    'nl': ['tuin', 'huis', 'deur', 'lek', 'hout', 'verf', 'plaag', 'gazon',
+           'plant', 'schimmel', 'vlo', 'teek', 'muis', 'repar', 'bouw'],
+    # 'bygg' вместо 'bygga' — иначе не совпадает с 'bygger' (2-е спряжение
+    # меняет окончание -a на -er, а не просто добавляет букву)
+    'sv': ['trädgård', 'hus', 'dörr', 'läcka', 'trä', 'måla', 'färg',
+           'skadedjur', 'gräsmatta', 'växt', 'mögel', 'loppa', 'fästing',
+           'mus', 'reparera', 'bygg'],
+}
+
+GROW_COMPANIONS = {
+    'en': ['seed', 'garden', 'vegetable', 'flower', 'tree', 'herb', 'potato',
+           'avocado', 'tomato', 'grass', 'soil', 'indoor', 'outdoor'],
+    'de': ['samen', 'garten', 'gemüse', 'blume', 'baum', 'kraut', 'kartoffel',
+           'avocado', 'tomate', 'gras', 'erde'],
+    'nl': ['zaad', 'tuin', 'groente', 'bloem', 'boom', 'kruid', 'aardappel',
+           'avocado', 'tomaat', 'gras', 'grond'],
+    'sv': ['frö', 'trädgård', 'grönsak', 'blomma', 'träd', 'ört', 'potatis',
+           'avokado', 'tomat', 'gräs', 'jord'],
+}
+
+CLEAN_COMPANIONS = {
+    'en': ['house', 'home', 'garage', 'gutter', 'window', 'carpet', 'floor',
+           'wall', 'ceiling', 'yard', 'deck', 'patio'],
+    'de': ['haus', 'garage', 'fenster', 'teppich', 'boden', 'wand', 'decke'],
+    'nl': ['huis', 'garage', 'raam', 'tapijt', 'vloer', 'muur', 'plafond'],
+    'sv': ['hus', 'garage', 'fönster', 'matta', 'golv', 'vägg', 'tak'],
+}
+
+DIY_WORDS = {
+    'en': ['craft', 'diy', 'sew', 'knit', 'crochet', 'origami', 'candle',
+           'jewelry', 'decor'],
+    'de': ['bastel', 'näh', 'strick', 'kerze', 'schmuck', 'deko'],
+    'nl': ['knutsel', 'naai', 'brei', 'kaars', 'sieraden', 'decoratie'],
+    'sv': ['pyssel', 'sy', 'sticka', 'ljus', 'smycken', 'dekor'],
+}
+
+# 'grow'/'clean' и их переводы — отдельно от списков выше, т.к. требуют
+# слова-напарника (см. комментарий в начале секции). Для DE/SV взяты
+# основы глаголов короче инфинитива — 'wachsen'/'rengöra' не являются
+# префиксами своих же спрягаемых форм ('wächst'/'rengör' короче или
+# отличаются гласной), поэтому нужен именно общий корень.
+GROW_WORD  = {'en': 'grow',  'de': 'wachs',   'nl': 'groei', 'sv': 'odla'}
+CLEAN_WORD = {'en': 'clean', 'de': 'reinig',  'nl': 'schoonmaken', 'sv': 'rengör'}
+
+def detect_category(keyword='', slug='', lang='en'):
+    lang = lang if lang in TECH_WORDS else 'en'
     text = f'{keyword} {slug}'.lower()
-    if any(w in text for w in ['clean','fix','repair','build','grow','garden','home','house','door','pipe','leak','wobbly','wood','paint','bed bug','pest','lawn','plant']):
-        return 'home-garden'
-    if any(w in text for w in ['cook','recipe','food','kitchen','bake','meal','dish','ingredient','eat','drink','coffee','tea','sauce']):
-        return 'kitchen-food'
-    if any(w in text for w in ['install','tech','computer','phone','wifi','software','app','delete','account','facebook','instagram','chrome','node','windows','mac','android','ios','internet']):
+
+    if _has_any(text, TECH_WORDS[lang], lang):
         return 'tech-devices'
-    if any(w in text for w in ['craft','diy','sew','knit','crochet','origami','candle','jewelry','decor']):
+
+    if _has_any(text, KITCHEN_WORDS[lang], lang):
+        return 'kitchen-food'
+
+    if _has_any(text, HOME_GARDEN_WORDS[lang], lang):
+        return 'home-garden'
+
+    if _has_word(text, GROW_WORD[lang], lang) and _has_any(text, GROW_COMPANIONS[lang], lang):
+        return 'home-garden'
+
+    if _has_word(text, CLEAN_WORD[lang], lang) and _has_any(text, CLEAN_COMPANIONS[lang], lang):
+        return 'home-garden'
+
+    if _has_any(text, DIY_WORDS[lang], lang):
         return 'diy-crafts'
+
     return 'general'
 
 # ==========================================
@@ -76,7 +214,7 @@ def build_index():
             if not fm:
                 continue
             slug = mdx_file.stem
-            category = fm.get('category') or detect_category(fm.get('keyword', ''), slug)
+            category = fm.get('category') or detect_category(fm.get('keyword', ''), slug, lang)
             articles_by_lang[lang].append({
                 'slug':          slug,
                 'title':         fm.get('title', slug),
