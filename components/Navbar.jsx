@@ -2,8 +2,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import articlesData from '@/data/articles-meta.json'
 
 const LANGS = ['en', 'de', 'nl', 'sv']
+const STATIC_ROUTES = ['about', 'contact', 'privacy', 'categories', 'category']
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -24,8 +26,24 @@ export default function Navbar() {
 
   function switchLang(l) {
     const segments = pathname.split('/')
-    segments[1] = l
-    window.location.href = segments.join('/')
+    const second = segments[2]
+
+    // Главная, /about, /contact, /privacy, /categories, /category/[cat] —
+    // эти пути одинаковы на всех языках, просто меняем сегмент языка.
+    if (!second || STATIC_ROUTES.includes(second)) {
+      segments[1] = l
+      window.location.href = segments.join('/')
+      return
+    }
+
+    // Иначе это страница статьи — её slug сгенерирован независимо для
+    // каждого языка и почти наверняка НЕ существует в другом языке.
+    // Ищем категорию этой статьи и переходим в категорию на новом языке,
+    // а если не нашли — на главную (вместо 404 на угаданном slug).
+    const article = (articlesData[lang] || []).find(a => a.slug === second)
+    window.location.href = article?.category
+      ? `/${l}/category/${article.category}`
+      : `/${l}`
   }
 
   return (
