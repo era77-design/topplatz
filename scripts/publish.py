@@ -323,8 +323,14 @@ def show_stats():
         pending = c.fetchone()[0]
         c.execute('SELECT COUNT(*) FROM keywords WHERE lang=? AND status="duplicate"', (lang,))
         duplicate = c.fetchone()[0]
-        dup_str = f' | 🔗 {duplicate} дублей пропущено' if duplicate else ''
-        print(f'   {lang.upper()}: ✅ {done} опубликовано | ⏳ {pending} в очереди{dup_str}')
+        c.execute('SELECT COUNT(*) FROM keywords WHERE lang=? AND status="fragment"', (lang,))
+        fragment = c.fetchone()[0]
+        extra = ''
+        if duplicate:
+            extra += f' | 🔗 {duplicate} дублей пропущено'
+        if fragment:
+            extra += f' | 🧩 {fragment} фрагментов отфильтровано'
+        print(f'   {lang.upper()}: ✅ {done} опубликовано | ⏳ {pending} в очереди{extra}')
     conn.close()
 
 # ==========================================
