@@ -64,10 +64,31 @@ STOPWORDS = {
     'and', 'or', 'be',
     'permanently', 'easily', 'quickly', 'safely', 'fast', 'naturally',
     'completely', 'properly', 'correctly', 'effectively',
+    # DE/SV безличное "man" ("wie kocht man" / "hur rengör man") — та же
+    # роль, что 'do'/'you' в английском; без этого ключевики типа
+    # "tvättmaskinen" vs "tvättmaskin" не считались дублями, т.к. 'man'
+    # раздувал знаменатель Jaccard-сравнения
+    'man',
 }
 
 
-def normalize(keyword):
+# Шведский определённый артикль крепится прямо к слову как суффикс
+# ("tvättmaskin" -> "tvättmaskinen") — предсказуемый паттерн, поэтому
+# отсекаем его перед сравнением. НЕ делаем то же для DE/NL: там обычные
+# слова часто и сами заканчиваются на похожие буквосочетания (нем.
+# "Wasser", "Feuer" — это форма слова, а не склонение), отсечение там
+# дало бы больше ложных совпадений, чем пользы.
+SV_SUFFIXES = ['en', 'et']
+MIN_STEM_LENGTH = 3
+
+def _reduce_sv(word):
+    for suffix in SV_SUFFIXES:
+        if word.endswith(suffix) and len(word) - len(suffix) >= MIN_STEM_LENGTH:
+            return word[:-len(suffix)]
+    return word
+
+
+def normalize(keyword, lang='en'):
     """Возвращает frozenset значимых слов после очистки от вопросительных
     префиксов, стоп-слов и пунктуации — используется как 'отпечаток' темы."""
     text = keyword.lower().strip()
@@ -79,6 +100,8 @@ def normalize(keyword):
             break
 
     words = [w for w in text.split() if w not in STOPWORDS and len(w) > 1]
+    if lang == 'sv':
+        words = [_reduce_sv(w) for w in words]
     return frozenset(words)
 
 
@@ -113,7 +136,7 @@ def find_duplicate_groups(rows):
     signatures = {}
     token_index = defaultdict(list)
     for idx, row in enumerate(rows):
-        sig = normalize(row[0])
+        sig = normalize(row[0], row[1])
         signatures[idx] = sig
         for token in sig:
             token_index[token].append(idx)
