@@ -43,6 +43,18 @@ REPORT_PATH = ROOT / 'dedup_report.txt'
 
 SIMILARITY_THRESHOLD = 0.6
 MAX_CLUSTER_SIZE = 20  # защита от аномальных 'снежного кома' групп
+# Кандидат с объёмом поиска >= этого порога НЕ уходит в FAQ чужой статьи,
+# а остаётся отдельным pending-ключевиком (своя страница выгоднее, чем строка FAQ).
+# Пороги разные по языкам — для NL низкий, потому что "kip pasta pesto" (40,500
+# поисков) и "pasta pesto" — разные блюда с разным составом, хотя слова похожи.
+# Для EN/DE/SV высокий, потому что "how to delete facebook account" и
+# "how do i delete my facebook account" — реально одна тема, просто > 300 поисков.
+MIN_SEARCHES_TO_KEEP = {
+    'en': 2000,
+    'de': 1000,
+    'nl': 300,
+    'sv': 1000,
+}
 
 QUESTION_PREFIXES = [
     'how do i', 'how do you', 'how can i', 'how can you',
@@ -170,6 +182,11 @@ def find_duplicate_groups(rows):
                 continue
             if len(group) >= MAX_CLUSTER_SIZE:
                 break
+            # кандидат с достаточным объёмом поиска заслуживает свою статью —
+            # не объединяем его в FAQ, даже если по словам похож на центр
+            lang_threshold = MIN_SEARCHES_TO_KEEP.get(rows[cand][1], 1000)
+            if (rows[cand][3] or 0) >= lang_threshold:
+                continue
             # сравнение ТОЛЬКО с центром — не с другими членами группы
             if jaccard(center_sig, signatures[cand]) >= SIMILARITY_THRESHOLD:
                 group.append(cand)
