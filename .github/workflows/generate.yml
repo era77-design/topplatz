@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       lang:
-        description: 'Язык'
+        description: 'Язык (all = все 4 языка)'
         required: true
-        default: 'nl'
+        default: 'all'
         type: choice
-        options: [en, de, nl, sv]
+        options: [all, en, de, nl, sv]
       rounds:
-        description: 'Раундов (5 статей каждый)'
+        description: 'Раундов на язык (5 статей каждый)'
         required: true
         default: '3'
         type: string
@@ -18,10 +18,10 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # до 6 часов на случай большого батча
+    timeout-minutes: 360
 
     permissions:
-      contents: write  # нужно для git push из workflow
+      contents: write
 
     steps:
       - name: Checkout
@@ -50,14 +50,27 @@ jobs:
       - name: Generate articles
         run: |
           ROUNDS=${{ inputs.rounds }}
-          LANG=${{ inputs.lang }}
-          for i in $(seq 1 $ROUNDS); do
-            echo "=== Раунд $i/$ROUNDS [$LANG] ==="
-            python scripts/generator.py $LANG
-            if [ $i -lt $ROUNDS ]; then
-              echo "Пауза 15 мин (лимит Unsplash)..."
-              sleep 900
-            fi
+          INPUT_LANG=${{ inputs.lang }}
+
+          if [ "$INPUT_LANG" = "all" ]; then
+            LANGS="de nl sv en"
+          else
+            LANGS="$INPUT_LANG"
+          fi
+
+          for LANG in $LANGS; do
+            echo ""
+            echo "=============================="
+            echo "  ЯЗЫК: $LANG"
+            echo "=============================="
+            for i in $(seq 1 $ROUNDS); do
+              echo "--- Раунд $i/$ROUNDS [$LANG] ---"
+              python scripts/generator.py $LANG
+              if [ $i -lt $ROUNDS ]; then
+                echo "Пауза 15 мин (лимит Unsplash)..."
+                sleep 900
+              fi
+            done
           done
 
       - name: Publish
