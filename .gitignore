@@ -41,6 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 .env
-keywords.db
 __pycache__/
 *.pyc
