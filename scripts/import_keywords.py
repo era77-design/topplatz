@@ -1,6 +1,7 @@
 import pandas as pd
 import sqlite3
 import os
+import sys
 from dotenv import load_dotenv
 
 load_dotenv('.env')
@@ -11,6 +12,15 @@ CSV_FILES = {
     'de': 'Keyword Stats 2026-06-12 at 07_43_09.csv',
     'nl': 'Keyword Stats 2026-06-12 at 07_44_47.csv',
     'sv': 'Keyword Stats 2026-06-12 at 07_45_55.csv',
+}
+
+# Курс к USD. Проверено на дату — UAH сверен 18.06.2026 (см. чат).
+# Для любой другой валюты, которой здесь нет, скрипт явно предупредит,
+# вместо того чтобы тихо сохранить неверное число — спроси Claude
+# уточнить актуальный курс, когда такая валюта реально встретится.
+USD_RATES = {
+    'USD': 1.0,
+    'UAH': 1 / 44.8,
 }
 
 STOP_WORDS = [
@@ -50,13 +60,18 @@ def init_db():
     conn.close()
     print('✅ База данных инициализирована')
 
-def parse_cpc(value):
+def parse_cpc(value, currency='USD'):
     if pd.isna(value):
         return 0.0
     try:
-        return float(str(value).replace(',', '.').replace(' ', ''))
+        raw = float(str(value).replace(',', '.').replace(' ', ''))
     except:
         return 0.0
+    if currency not in USD_RATES:
+        print(f'   ⚠️  Неизвестная валюта "{currency}" — сохраняю БЕЗ пересчёта, '
+              f'число может быть неверным в долларах! Уточни курс у Claude.')
+        return round(raw, 2)
+    return round(raw * USD_RATES[currency], 2)
 
 def import_csv(lang, filepath):
     if not os.path.exists(filepath):
@@ -81,8 +96,9 @@ def import_csv(lang, filepath):
             except:
                 avg_searches = 0
             competition = str(row.get('Competition', 'Unknown'))
-            cpc_low  = parse_cpc(row.get('Top of page bid (low range)', 0))
-            cpc_high = parse_cpc(row.get('Top of page bid (high range)', 0))
+            currency = str(row.get('Currency', 'USD')).strip()
+            cpc_low  = parse_cpc(row.get('Top of page bid (low range)', 0), currency)
+            cpc_high = parse_cpc(row.get('Top of page bid (high range)', 0), currency)
             c.execute('''
                 INSERT OR IGNORE INTO keywords
                 (keyword, lang, avg_searches, competition, cpc_low, cpc_high)
@@ -118,12 +134,27 @@ if __name__ == '__main__':
     print('🚀 TopPlatz — Импорт ключевиков из Google Keyword Planner')
     print('=' * 55)
     init_db()
-    total_saved = total_skipped = 0
-    for lang, filename in CSV_FILES.items():
-        print(f'\n📥 Импорт {lang.upper()}: {filename}')
-        saved, skipped = import_csv(lang, filename)
-        total_saved += saved
-        total_skipped += skipped
-        print(f'   ✅ Сохранено: {saved} | 🚫 Отфильтровано: {skipped}')
-    print(f'\n🎉 Итого: {total_saved} сохранено, {total_skipped} отфильтровано')
+
+    if len(sys.argv) >= 3:
+        # py -3.11 scripts/import_keywords.py nl "путь/к/файлу.csv"
+        # — добавить ОДИН новый файл для конкретного языка
+        lang = sys.argv[1].lower()
+        filepath = sys.argv[2]
+        if lang not in ('en', 'de', 'nl', 'sv'):
+            print(f'⚠️  Неизвестный язык "{lang}". Доступные: en, de, nl, sv')
+        else:
+            print(f'\n📥 Импорт {lang.upper()}: {filepath}')
+            saved, skipped = import_csv(lang, filepath)
+            print(f'   ✅ Сохранено: {saved} | 🚫 Отфильтровано: {skipped}')
+    else:
+        # без аргументов — исходное поведение: разовый импорт 4 файлов из CSV_FILES
+        total_saved = total_skipped = 0
+        for lang, filename in CSV_FILES.items():
+            print(f'\n📥 Импорт {lang.upper()}: {filename}')
+            saved, skipped = import_csv(lang, filename)
+            total_saved += saved
+            total_skipped += skipped
+            print(f'   ✅ Сохранено: {saved} | 🚫 Отфильтровано: {skipped}')
+        print(f'\n🎉 Итого: {total_saved} сохранено, {total_skipped} отфильтровано')
+
     show_stats()
