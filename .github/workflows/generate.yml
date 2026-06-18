@@ -1,0 +1,64 @@
+name: Generate Articles
+
+on:
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: 'Язык'
+        required: true
+        default: 'nl'
+        type: choice
+        options: [en, de, nl, sv]
+      rounds:
+        description: 'Раундов (5 статей каждый)'
+        required: true
+        default: '3'
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # до 6 часов на случай большого батча
+
+    permissions:
+      contents: write  # нужно для git push из workflow
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-genai python-dotenv requests
+
+      - name: Create .env
+        run: |
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+          echo "UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}" >> .env
+
+      - name: Configure git
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+      - name: Generate articles
+        run: |
+          ROUNDS=${{ inputs.rounds }}
+          LANG=${{ inputs.lang }}
+          for i in $(seq 1 $ROUNDS); do
+            echo "=== Раунд $i/$ROUNDS [$LANG] ==="
+            python scripts/generator.py $LANG
+            if [ $i -lt $ROUNDS ]; then
+              echo "Пауза 15 мин (лимит Unsplash)..."
+              sleep 900
+            fi
+          done
+
+      - name: Publish
+        run: python scripts/publish.py
