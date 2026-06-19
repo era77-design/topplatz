@@ -64,16 +64,19 @@ TECH_WORDS = {
            'delete', 'account', 'facebook', 'instagram', 'chrome', 'node',
            'windows', 'android', 'ios', 'internet', 'mac', 'gmail', 'email',
            'browser', 'password', 'tv', 'screen', 'laptop', 'tablet', 'router',
-           'bluetooth', 'printer', 'telegram'],
+           'bluetooth', 'printer', 'telegram', 'website', 'webshop'],
     'de': ['konto', 'lösch', 'facebook', 'instagram', 'handy', 'computer',
            'telefon', 'wlan', 'software', 'app', 'chrome', 'windows', 'android',
-           'internet', 'email', 'passwort', 'browser', 'drucker', 'gmail'],
+           'internet', 'email', 'passwort', 'browser', 'drucker', 'gmail',
+           'website', 'webseite', 'webshop', 'onlineshop'],
     'nl': ['account', 'verwijder', 'facebook', 'instagram', 'telefoon',
            'computer', 'wifi', 'software', 'app', 'chrome', 'windows', 'android',
-           'internet', 'email', 'wachtwoord', 'browser', 'printer', 'gmail'],
+           'internet', 'email', 'wachtwoord', 'browser', 'printer', 'gmail',
+           'website', 'webshop', 'webwinkel'],
     'sv': ['konto', 'radera', 'facebook', 'instagram', 'telefon', 'dator',
            'wifi', 'programvara', 'app', 'chrome', 'windows', 'android',
-           'internet', 'mejl', 'lösenord', 'webbläsare', 'skrivare', 'gmail'],
+           'internet', 'mejl', 'lösenord', 'webbläsare', 'skrivare', 'gmail',
+           'webbplats', 'webbsida', 'webshop', 'nätbutik'],
 }
 
 KITCHEN_WORDS = {
@@ -238,6 +241,39 @@ def build_index():
 
     total = sum(len(v) for v in articles_by_lang.values())
     print(f'\n📋 Индекс обновлён: {total} статей → data/articles-meta.json')
+
+    # Обновляем статус тем в семантическом ядре — помечаем как done
+    # если статья опубликована. Только если таблица topics существует.
+    if DB_PATH.exists():
+        try:
+            conn = sqlite3.connect(str(DB_PATH))
+            c = conn.cursor()
+            c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='topics'")
+            if c.fetchone():
+                updated = 0
+                for lang, articles in articles_by_lang.items():
+                    for art in articles:
+                        kw = art.get('keyword', '')
+                        slug = art.get('slug', '')
+                        if kw:
+                            c.execute('''
+                                UPDATE topics SET status="done", article_slug=?
+                                WHERE lang=? AND id IN (
+                                    SELECT REPLACE(topic_id, "_" || lang, "")
+                                    FROM keywords
+                                    WHERE keyword=? AND lang=?
+                                    AND topic_id IS NOT NULL
+                                )
+                                AND status != "done"
+                            ''', (slug, lang, kw, lang))
+                            updated += c.rowcount
+                conn.commit()
+                conn.close()
+                if updated:
+                    print(f'🧠 Семантическое ядро: {updated} тем помечено как done')
+        except Exception as e:
+            pass  # topics таблица не обязательна, не блокируем публикацию
+
     return articles_by_lang, total
 
 # ==========================================

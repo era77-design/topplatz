@@ -375,12 +375,31 @@ def get_pending_keywords(lang=None, limit=5):
 
     c.execute("PRAGMA table_info(keywords)")
     has_related = any(row[1] == 'related_phrases' for row in c.fetchall())
-    cols = 'keyword, lang, avg_searches, cpc_high' + (', related_phrases' if has_related else '')
+    cols = 'k.keyword, k.lang, k.avg_searches, k.cpc_high' + (', k.related_phrases' if has_related else '')
+
+    # Сортируем по total_value темы (сумма всех формулировок × CPC) вместо
+    # просто avg_searches одного ключевика — генерируем самые ценные темы первыми.
+    # Если у ключевика нет topic_id (старые данные до кластеризации) —
+    # фолбэк на индивидуальную ценность (avg_searches × cpc_high).
+    topic_join = '''
+        LEFT JOIN topics t
+            ON k.topic_id = (t.id || '_' || k.lang) AND t.lang = k.lang
+    '''
+    order = 'COALESCE(t.total_value, k.avg_searches * COALESCE(k.cpc_high, 0)) DESC'
 
     if lang:
-        c.execute(f'SELECT {cols} FROM keywords WHERE status="pending" AND lang=? ORDER BY avg_searches DESC LIMIT ?', (lang, limit))
+        c.execute(f'''
+            SELECT {cols} FROM keywords k {topic_join}
+            WHERE k.status="pending" AND k.lang=?
+            ORDER BY {order} LIMIT ?
+        ''', (lang, limit))
     else:
-        c.execute(f'SELECT {cols} FROM keywords WHERE status="pending" ORDER BY avg_searches DESC LIMIT ?', (limit,))
+        c.execute(f'''
+            SELECT {cols} FROM keywords k {topic_join}
+            WHERE k.status="pending"
+            ORDER BY {order} LIMIT ?
+        ''', (limit,))
+
     rows = c.fetchall()
     conn.close()
 
