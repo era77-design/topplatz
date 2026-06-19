@@ -52,7 +52,7 @@ export default function BottomBar() {
       {moreOpen && (
         <div style={{
           position: 'fixed',
-          bottom: '60px',
+          bottom: 'calc(60px + env(safe-area-inset-bottom, 0px))',
           left: 0,
           right: 0,
           background: 'var(--nav-bg)',
@@ -109,7 +109,8 @@ export default function BottomBar() {
         bottom: 0,
         left: 0,
         right: 0,
-        height: '60px',
+        height: 'calc(60px + env(safe-area-inset-bottom, 0px))',
+        paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         background: 'var(--nav-bg)',
         borderTop: '0.5px solid var(--border)',
         boxShadow: '0 -4px 12px rgba(0,0,0,0.08)',
