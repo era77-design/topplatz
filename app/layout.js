@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import BottomBar from '@/components/BottomBar'
 import CookieBanner from '@/components/CookieBanner'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'TopPlatz — How-To Guides',
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         <main style={{ paddingBottom: 'calc(70px + env(safe-area-inset-bottom, 0px))' }}>
           {children}
         </main>
+        <Footer />
         <BottomBar />
         <CookieBanner />
       </body>

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import articlesData from '@/data/articles-meta.json'
 
 const LANGS = ['en', 'de', 'nl', 'sv']
-const STATIC_ROUTES = ['about', 'contact', 'privacy', 'categories', 'category']
+const STATIC_ROUTES = ['about', 'contact', 'privacy', 'categories', 'category', 'impressum']
 
 export default function Navbar() {
   const pathname = usePathname()
