@@ -1,6 +1,20 @@
 {
   "en": [
     {
+      "slug": "how-to-get-rid-of-mice",
+      "title": "How to Get Rid of Mice Effectively & Safely",
+      "description": "Learn practical and safe methods to get rid of mice from your home. Discover how to identify entry points, set traps, and prevent future infestations.",
+      "photoUrl": "https://images.unsplash.com/photo-1774369914755-44d38630c7b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxnZXQlMjByaWQlMjBvZnxlbnwxfDB8fHwxNzgyMTU5NzI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "photoAlt": "Close-up of an open bible with handwritten notes.",
+      "photoAuthor": "Brett Jordan",
+      "photoUnsplash": "https://unsplash.com/photos/close-up-of-an-open-bible-with-handwritten-notes-PuiWafqzZjU",
+      "category": "home-garden",
+      "timeMinutes": 60,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to get rid of mice"
+    },
+    {
       "slug": "how-to-install-gutters",
       "title": "How to Install Gutters: A DIY Guide for Your Home",
       "description": "Learn how to install gutters effectively to protect your home's foundation from water damage. This DIY guide covers tools, steps, and essential tips.",
@@ -771,20 +785,6 @@
       "keyword": "how to clean dishwasher"
     },
     {
-      "slug": "how-to-get-rid-of-mice",
-      "title": "How to Get Rid of Mice Effectively & Safely",
-      "description": "Learn practical and safe methods to get rid of mice from your home. Discover how to identify entry points, set traps, and prevent future infestations.",
-      "photoUrl": "",
-      "photoAlt": "",
-      "photoAuthor": "",
-      "photoUnsplash": "",
-      "category": "home-garden",
-      "timeMinutes": 60,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to get rid of mice"
-    },
-    {
       "slug": "how-to-make-a-website-beginner-guide",
       "title": "How to Make a Website: A Complete Beginner's Guide",
       "description": "Learn how to make a website from scratch with this easy-to-follow guide. Discover simple steps for choosing a platform, designing your site, and publishing it online today.",
@@ -1547,6 +1547,20 @@
   ],
   "sv": [
     {
+      "slug": "hur-tar-man-bort-en-varta-hemgjord-behandling",
+      "title": "Hur tar man bort en vårta: Guide till säker hemmabehandling",
+      "description": "Lär dig hur du säkert kan behandla och ta bort vårtor hemma med receptfria medel. Få tips om när du bör söka professionell vård och hur du undviker spridning.",
+      "photoUrl": "https://images.unsplash.com/photo-1563314143-ff5e0069a574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx0YXIlMjBib3J0JTIwZW58ZW58MXwwfHx8MTc4MjE1OTcyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "photoAlt": "body of water near black and white houses at daytime",
+      "photoAuthor": "Gunnar Ridderström",
+      "photoUnsplash": "https://unsplash.com/photos/body-of-water-near-black-and-white-houses-at-daytime-MY60pzk6quc",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Enkel",
+      "createdAt": "2026-06-18",
+      "keyword": "hur tar man bort en vårta"
+    },
+    {
       "slug": "tappat-korkortet-vad-gor-man",
       "title": "Tappat Körkortet? Vad Gör Man – Steg för Steg Guide",
       "description": "Har du tappat bort ditt körkort? Lugn, det är en vanlig situation. Lär dig snabbt och enkelt vad du ska göra, från att anmäla förlusten till att beställa ett nytt körkort.",
@@ -1615,20 +1629,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "hur rengör man ugnen"
-    },
-    {
-      "slug": "hur-tar-man-bort-en-varta-hemgjord-behandling",
-      "title": "Hur tar man bort en vårta: Guide till säker hemmabehandling",
-      "description": "Lär dig hur du säkert kan behandla och ta bort vårtor hemma med receptfria medel. Få tips om när du bör söka professionell vård och hur du undviker spridning.",
-      "photoUrl": "",
-      "photoAlt": "",
-      "photoAuthor": "",
-      "photoUnsplash": "",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Enkel",
-      "createdAt": "2026-06-18",
-      "keyword": "hur tar man bort en vårta"
     },
     {
       "slug": "hur-rengor-man-en-kristallkrona",
