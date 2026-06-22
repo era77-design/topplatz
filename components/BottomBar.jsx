@@ -81,9 +81,10 @@ export default function BottomBar() {
 
           <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '8px' }}>Pages</p>
           {[
-            { href: `/${lang}/about`,   icon: 'ℹ️', label: 'About' },
-            { href: `/${lang}/contact`, icon: '✉️', label: 'Contact' },
-            { href: `/${lang}/privacy`, icon: '🔒', label: 'Privacy Policy' },
+            { href: `/${lang}/about`,     icon: 'ℹ️', label: 'About' },
+            { href: `/${lang}/contact`,   icon: '✉️', label: 'Contact' },
+            { href: `/${lang}/privacy`,   icon: '🔒', label: 'Privacy Policy' },
+            { href: `/${lang}/impressum`, icon: '📄', label: 'Impressum / Legal' },
           ].map(item => (
             <Link key={item.href} href={item.href} onClick={() => setMoreOpen(false)} style={{
               display: 'flex',

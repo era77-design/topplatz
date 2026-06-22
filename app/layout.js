@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import BottomBar from '@/components/BottomBar'
+import CookieBanner from '@/components/CookieBanner'
 
 export const metadata = {
   title: 'TopPlatz — How-To Guides',
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <BottomBar />
+        <CookieBanner />
       </body>
     </html>
   )
