@@ -1433,20 +1433,6 @@
       "keyword": "bubbelthee"
     },
     {
-      "slug": "klassiek-lasagne-recept-zelf-maken",
-      "title": "Heerlijk Lasagne Recept: Klassieke Italiaanse Ovenschotel",
-      "description": "Ontdek hoe je zelf een authentieke lasagne maakt met dit eenvoudige recept. Perfect voor een gezellige avondmaaltijd, boordevol smaak en laagjes genot.",
-      "photoUrl": "https://images.unsplash.com/photo-1621510456681-2330135e5871?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGJlZWYlMjBsYXNhZ25hfGVufDF8MHx8fDE3ODE4MjMxNDZ8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "cooked food on white ceramic plate",
-      "photoAuthor": "Mateusz Feliksik",
-      "photoUnsplash": "https://unsplash.com/photos/cooked-food-on-white-ceramic-plate--9ypyrRAjdw",
-      "category": "kitchen-food",
-      "timeMinutes": 45,
-      "difficulty": "Medium",
-      "createdAt": "2026-06-18",
-      "keyword": "lasagne recept"
-    },
-    {
       "slug": "asperge-koken-perfect-gaar",
       "title": "Asperge Koken: Perfect Gaar in Eenvoudige Stappen",
       "description": "Leer hoe je asperges perfect kookt, van schillen tot serveren. Ontdek de beste methode voor zowel witte als groene asperges en geniet van deze heerlijke seizoensgroente. Eenvoudig en snel!",
@@ -1459,20 +1445,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "asperge koken"
-    },
-    {
-      "slug": "asperges-koken-perfecte-bereiding-gids",
-      "title": "Asperges Koken: De Perfecte Gids voor Witte en Groene Asperges",
-      "description": "Leer asperges koken als een pro! Deze stap-voor-stap gids toont je hoe je witte en groene asperges perfect bereidt, van schillen tot serveren. Eenvoudig en heerlijk.",
-      "photoUrl": "https://images.unsplash.com/photo-1619964606713-d0da74c76a07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw0fHxib2lsaW5nJTIwYXNwYXJhZ3VzJTIwcG90fGVufDF8MHx8fDE3ODE4MjIwNzl8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "green vegetable on brown wooden chopping board",
-      "photoAuthor": "Peter Schad",
-      "photoUnsplash": "https://unsplash.com/photos/green-vegetable-on-brown-wooden-chopping-board-_iwf8qa5i8M",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "asperges koken"
     },
     {
       "slug": "pasta-pesto-maken-recept",
