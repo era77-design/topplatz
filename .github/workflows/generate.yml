@@ -1,6 +1,7 @@
 name: Generate Articles
 
 on:
+  # Ручной запуск с выбором языка и раундов
   workflow_dispatch:
     inputs:
       lang:
@@ -14,6 +15,11 @@ on:
         required: true
         default: '3'
         type: string
+
+  # Автозапуск каждую ночь в 3:00 UTC
+  # При автозапуске: all языки, 3 раунда = 60 статей за ночь
+  schedule:
+    - cron: '0 3 * * *'
 
 jobs:
   generate:
@@ -49,14 +55,18 @@ jobs:
 
       - name: Generate articles
         run: |
-          ROUNDS=${{ inputs.rounds }}
-          INPUT_LANG=${{ inputs.lang }}
+          # При ручном запуске берём параметры из inputs
+          # При автозапуске по расписанию — defaults: all / 3
+          INPUT_LANG="${{ inputs.lang || 'all' }}"
+          ROUNDS="${{ inputs.rounds || '3' }}"
 
           if [ "$INPUT_LANG" = "all" ]; then
             LANGS="de nl sv en"
           else
             LANGS="$INPUT_LANG"
           fi
+
+          echo "Режим: lang=$INPUT_LANG rounds=$ROUNDS"
 
           for LANG in $LANGS; do
             echo ""
