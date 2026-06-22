@@ -144,7 +144,7 @@ function AdSlot({ slot, label = 'Advertisement' }) {
       <p style={{ fontSize: '10px', color: 'var(--text-secondary)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{label}</p>
       <ins className="adsbygoogle"
         style={{ display: 'block', minHeight: '90px', background: 'var(--bg-secondary)', borderRadius: '8px' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-client="ca-pub-3466093106724998"
         data-ad-slot={slot}
         data-ad-format="auto"
         data-full-width-responsive="true"
@@ -421,7 +421,7 @@ export default async function ArticlePage({ params }) {
             <p style={{ fontSize: '10px', color: 'var(--text-secondary)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t.adLabel}</p>
             <ins className="adsbygoogle"
               style={{ display: 'block', minHeight: '250px', background: 'var(--bg-secondary)', borderRadius: '8px' }}
-              data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+              data-ad-client="ca-pub-3466093106724998"
               data-ad-slot="6677889900"
               data-ad-format="vertical"
             />
