@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+﻿import { NextResponse } from 'next/server'
 const LOCALES = ['en', 'de', 'nl', 'sv']
 const DEFAULT_LOCALE = 'en'
 export function middleware(request) {
@@ -12,5 +12,5 @@ export function middleware(request) {
   )
 }
 export const config = {
-  matcher: ['/((?!_next|favicon.ico|robots.txt|sitemap.xml).*)']
+  matcher: ['/((?!_next|favicon.ico|robots.txt|sitemap.xml|ads.txt).*)']
 }
