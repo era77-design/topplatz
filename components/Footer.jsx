@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation'
 const LANGS = ['en', 'de', 'nl', 'sv']
 
 const LABELS = {
-  en: { impressum: 'Legal Notice', privacy: 'Privacy', about: 'About', contact: 'Contact' },
-  de: { impressum: 'Impressum',    privacy: 'Datenschutz', about: 'Über uns', contact: 'Kontakt' },
-  nl: { impressum: 'Colofon',      privacy: 'Privacy', about: 'Over ons', contact: 'Contact' },
-  sv: { impressum: 'Juridiskt',    privacy: 'Integritet', about: 'Om oss', contact: 'Kontakt' },
+  en: { categories: 'Categories', impressum: 'Legal Notice', privacy: 'Privacy', about: 'About', contact: 'Contact', sitemap: 'Sitemap' },
+  de: { categories: 'Kategorien', impressum: 'Impressum',    privacy: 'Datenschutz', about: 'Über uns', contact: 'Kontakt', sitemap: 'Sitemap' },
+  nl: { categories: 'Categorieën', impressum: 'Colofon',     privacy: 'Privacy', about: 'Over ons', contact: 'Contact', sitemap: 'Sitemap' },
+  sv: { categories: 'Kategorier', impressum: 'Juridiskt',    privacy: 'Integritet', about: 'Om oss', contact: 'Kontakt', sitemap: 'Sitemap' },
 }
 
 export default function Footer() {
@@ -37,10 +37,12 @@ export default function Footer() {
         © {new Date().getFullYear()} TopPlatz
       </span>
       <nav style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-        <Link href={`/${lang}/about`}     style={linkStyle}>{t.about}</Link>
-        <Link href={`/${lang}/contact`}   style={linkStyle}>{t.contact}</Link>
-        <Link href={`/${lang}/privacy`}   style={linkStyle}>{t.privacy}</Link>
-        <Link href={`/${lang}/impressum`} style={{ ...linkStyle, fontWeight: 500 }}>{t.impressum}</Link>
+        <Link href={`/${lang}/categories`} style={linkStyle}>{t.categories}</Link>
+        <Link href={`/${lang}/about`}      style={linkStyle}>{t.about}</Link>
+        <Link href={`/${lang}/contact`}    style={linkStyle}>{t.contact}</Link>
+        <Link href={`/${lang}/privacy`}    style={linkStyle}>{t.privacy}</Link>
+        <Link href={`/${lang}/impressum`}  style={{ ...linkStyle, fontWeight: 500 }}>{t.impressum}</Link>
+        <a href="/sitemap.xml" target="_blank" rel="noopener" style={linkStyle}>{t.sitemap}</a>
       </nav>
 
       {/* Footer только на десктопе — на мобиле навигация в BottomBar */}
