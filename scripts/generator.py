@@ -145,6 +145,36 @@ def score_photo_relevance(image_bytes, keyword):
 # UNSPLASH — подбор фото с проверкой релевантности
 # ==========================================
 
+def get_ai_photo(prompt):
+    """
+    Генерирует изображение через Pollinations.ai (бесплатно, без API-ключа).
+    Используется как fallback когда Unsplash не нашёл подходящего фото.
+    URL детерминирован — тот же prompt всегда даёт то же изображение.
+    """
+    try:
+        encoded = requests.utils.quote(prompt)
+        url = (f'https://image.pollinations.ai/prompt/{encoded}'
+               f'?width=1200&height=630&nologo=true&model=flux')
+        url_small = (f'https://image.pollinations.ai/prompt/{encoded}'
+                     f'?width=400&height=210&nologo=true&model=flux')
+        # Делаем HEAD-запрос чтобы убедиться что сервис доступен
+        r = requests.get(url_small, timeout=45)
+        if r.status_code == 200 and 'image' in r.headers.get('content-type', ''):
+            print(f'      🤖 AI-генерация (Pollinations.ai): "{prompt[:50]}"')
+            return {
+                'url':          url,
+                'url_small':    url_small,
+                'alt':          prompt,
+                'author_name':  'AI',
+                'author_url':   'https://pollinations.ai',
+                'unsplash_url': 'https://pollinations.ai',
+                'is_ai':        True,
+            }
+    except Exception as e:
+        print(f'  ⚠️  Pollinations fallback: {e}')
+    return None
+
+
 def get_photo(query, keyword, used_photo_ids):
     try:
         resp = requests.get(
@@ -155,7 +185,19 @@ def get_photo(query, keyword, used_photo_ids):
         )
         results = resp.json().get('results', [])
         if not results:
-            return None
+            # Unsplash ничего не нашёл — пробуем более короткий запрос
+            short_query = ' '.join(query.split()[:2])
+            if short_query != query:
+                resp2 = requests.get(
+                    'https://api.unsplash.com/search/photos',
+                    params={'query': short_query, 'per_page': PHOTO_CANDIDATES, 'orientation': 'landscape', 'content_filter': 'high'},
+                    headers={'Authorization': f'Client-ID {UNSPLASH_KEY}'},
+                    timeout=10
+                )
+                results = resp2.json().get('results', [])
+            # Если всё ещё пусто — генерируем через AI
+            if not results:
+                return get_ai_photo(query)
 
         if len(results) == 1:
             best = results[0]
@@ -182,6 +224,12 @@ def get_photo(query, keyword, used_photo_ids):
             note = '' if unused else ' (все уже использованы — берём лучший повтор)'
             print(f'      🎯 Релевантность: [{scores_str}] → выбрано {best_score}/10{note}')
 
+            # Если лучший результат совсем нерелевантен — пробуем AI
+            if best_score <= 2:
+                ai = get_ai_photo(keyword)
+                if ai:
+                    return ai
+
         used_photo_ids.add(best['id'])
 
         return {
@@ -194,7 +242,7 @@ def get_photo(query, keyword, used_photo_ids):
         }
     except Exception as e:
         print(f'  ⚠️  Unsplash: {e}')
-        return None
+        return get_ai_photo(query)
 
 # ==========================================
 # ПРОМПТ
@@ -318,7 +366,10 @@ def save_as_mdx(article, keyword, lang, slug, photo):
 
     photo_md = ''
     if photo:
-        photo_md = f"\n![{photo['alt']}]({photo['url']})\n*Photo by [{photo['author_name']}]({photo['author_url']}) on [Unsplash]({photo['unsplash_url']})*\n"
+        if photo.get('is_ai'):
+            photo_md = f"\n![{photo['alt']}]({photo['url']})\n*🤖 AI-generated image via [Pollinations.ai]({photo['author_url']})*\n"
+        else:
+            photo_md = f"\n![{photo['alt']}]({photo['url']})\n*Photo by [{photo['author_name']}]({photo['author_url']}) on [Unsplash]({photo['unsplash_url']})*\n"
 
     steps_md = ''
     for i, step in enumerate(article.get('steps', []), 1):
