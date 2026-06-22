@@ -553,6 +553,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://topplatz.com/de/bluebrixx-anleitungen-finden-herunterladen</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://topplatz.com/de/zecken-richtig-entfernen</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -609,12 +615,6 @@
   <url>
     <loc>https://topplatz.com/de/brokkoli-kochen-wie-lang-dauer</loc>
     <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topplatz.com/de/bluebrixx-anleitungen-finden-herunterladen</loc>
-    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1039,6 +1039,20 @@
   ],
   "de": [
     {
+      "slug": "bluebrixx-anleitungen-finden-herunterladen",
+      "title": "BlueBrixx Anleitungen finden & herunterladen",
+      "description": "Verlorene BlueBrixx Bauanleitung gesucht? Erfahren Sie, wie Sie schnell und einfach die digitalen Anleitungen für Ihre BlueBrixx-Sets online finden und herunterladen können.",
+      "photoUrl": "https://images.unsplash.com/photo-1622120893064-d9117b424b91?ixlib=rb-4.1.0&q=80&w=1080&fit=max",
+      "photoAlt": "building blocks instruction manual",
+      "photoAuthor": "Sean",
+      "photoUnsplash": "https://unsplash.com/photos/1622120893064-d9117b424b91",
+      "category": "general",
+      "timeMinutes": 10,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "bluebrixx anleitungen"
+    },
+    {
       "slug": "zecken-richtig-entfernen",
       "title": "Zecken richtig entfernen: Ein sicherer Leitfaden",
       "description": "Erfahren Sie, wie Sie Zecken sicher und effektiv von Haut entfernen. Dieser Leitfaden zeigt Ihnen Schritt für Schritt, wie Sie Zecken richtig entfernen, um Infektionen vorzubeugen und Ihre Gesundheit zu schützen.",
@@ -1177,20 +1191,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "wie lang kocht man brokkoli"
-    },
-    {
-      "slug": "bluebrixx-anleitungen-finden-herunterladen",
-      "title": "BlueBrixx Anleitungen finden & herunterladen",
-      "description": "Verlorene BlueBrixx Bauanleitung gesucht? Erfahren Sie, wie Sie schnell und einfach die digitalen Anleitungen für Ihre BlueBrixx-Sets online finden und herunterladen können.",
-      "photoUrl": "",
-      "photoAlt": "",
-      "photoAuthor": "",
-      "photoUnsplash": "",
-      "category": "general",
-      "timeMinutes": 10,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "bluebrixx anleitungen"
     },
     {
       "slug": "wie-kocht-man-kartoffel",
