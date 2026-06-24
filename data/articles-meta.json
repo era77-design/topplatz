@@ -1,6 +1,34 @@
 {
   "en": [
     {
+      "slug": "how-to-wash-suede-shoes",
+      "title": "How to Wash Suede Shoes Safely",
+      "description": "Learn how to gently clean and refresh your suede shoes without damage. This guide covers effective spot cleaning and overall care for delicate suede.",
+      "photoUrl": "https://images.unsplash.com/photo-1577467013350-7c22a844e1a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMHN1ZWRlJTIwc2hvZXMlMjBicnVzaHxlbnwxfDB8fHwxNzgxNTYxODU0fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "hand brushes on brown plate",
+      "photoAuthor": "Lina Verovaya",
+      "photoUnsplash": "https://unsplash.com/photos/hand-brushes-on-brown-plate-VU7FzBEMDUo",
+      "category": "general",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to wash suede shoes"
+    },
+    {
+      "slug": "how-to-take-out-stripped-screw",
+      "title": "How to Take Out a Stripped Screw Easily",
+      "description": "Learn how to remove a stripped screw using simple tools and effective techniques. Save your project and prevent further damage with this practical guide.",
+      "photoUrl": "https://images.unsplash.com/photo-1566379680937-b375ba1b7691?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxzdHJpcHBlZCUyMHNjcmV3JTIwcmVtb3ZhbHxlbnwxfDB8fHwxNzgxNTk0ODQ4fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "screw lot with white background",
+      "photoAuthor": "Yevgen Tarasov",
+      "photoUnsplash": "https://unsplash.com/photos/screw-lot-with-white-background-PrAZFW-Ityo",
+      "category": "general",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to take out a stripped screw"
+    },
+    {
       "slug": "how-to-wash-ugg-boots",
       "title": "How to Wash UGG Boots Safely at Home",
       "description": "Learn the safest and most effective methods to hand-wash your UGG boots at home. Protect their delicate sheepskin and suede, keeping them fresh and clean.",
@@ -13,6 +41,34 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to wash ugg boots"
+    },
+    {
+      "slug": "how-to-wash-caps",
+      "title": "How to Wash Caps: Keep Your Hats Looking Fresh",
+      "description": "Learn the best methods for how to wash caps safely and effectively, preventing damage and maintaining their shape. Get your hats clean and looking new.",
+      "photoUrl": "https://images.unsplash.com/photo-1521369909029-2afed882baee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwYmFzZWJhbGwlMjBjYXAlMjBieSUyMGhhbmR8ZW58MXwwfHx8MTc4MTY4NTIzMXww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "gray baseball cap on white surface",
+      "photoAuthor": "Yang Deng",
+      "photoUnsplash": "https://unsplash.com/photos/gray-baseball-cap-on-white-surface-2loKxdi6Hmo",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "how to wash caps"
+    },
+    {
+      "slug": "how-to-make-a-website-beginner-guide",
+      "title": "How to Make a Website: A Complete Beginner's Guide",
+      "description": "Learn how to make a website from scratch with this easy-to-follow guide. Discover simple steps for choosing a platform, designing your site, and publishing it online today.",
+      "photoUrl": "https://images.unsplash.com/photo-1560472355-109703aa3edc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwYnVpbGRlciUyMGludGVyZmFjZXxlbnwxfDB8fHwxNzgxNTYzMjgwfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "turned-on monitor",
+      "photoAuthor": "Stephen Phillips - Hostreviews.co.uk",
+      "photoUnsplash": "https://unsplash.com/photos/turned-on-monitor-zs98a0DtKL4",
+      "category": "tech-devices",
+      "timeMinutes": 90,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to make a website"
     },
     {
       "slug": "how-to-remove-a-tick",
@@ -29,6 +85,20 @@
       "keyword": "how to remove a tick"
     },
     {
+      "slug": "how-to-make-diy-all-purpose-cleaning-spray",
+      "title": "How to Make a DIY All-Purpose Cleaning Spray",
+      "description": "Learn how to easily make an effective, natural all-purpose cleaning spray using common household ingredients. Save money and reduce chemicals in your home with this simple recipe.",
+      "photoUrl": "https://images.unsplash.com/photo-1563453392212-326f5e854473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGNsZWFuaW5nJTIwc3ByYXklMjBib3R0bGV8ZW58MXwwfHx8MTc4MTI4MDA5NXww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "person holding yellow plastic spray bottle",
+      "photoAuthor": "JESHOOTS.COM",
+      "photoUnsplash": "https://unsplash.com/photos/person-holding-yellow-plastic-spray-bottle-__ZMnefoI3k",
+      "category": "diy-crafts",
+      "timeMinutes": 5,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-12",
+      "keyword": "how to make"
+    },
+    {
       "slug": "how-to-remove-acrylic-paint-from-clothes",
       "title": "How to Remove Acrylic Paint from Clothes Effectively",
       "description": "Learn effective methods to remove wet or dried acrylic paint from various types of clothing. Get your garments looking clean again with these simple steps.",
@@ -41,20 +111,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to remove acrylic paint from clothes"
-    },
-    {
-      "slug": "how-to-wash-suede-shoes",
-      "title": "How to Wash Suede Shoes Safely",
-      "description": "Learn how to gently clean and refresh your suede shoes without damage. This guide covers effective spot cleaning and overall care for delicate suede.",
-      "photoUrl": "https://images.unsplash.com/photo-1577467013350-7c22a844e1a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMHN1ZWRlJTIwc2hvZXMlMjBicnVzaHxlbnwxfDB8fHwxNzgxNTYxODU0fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "hand brushes on brown plate",
-      "photoAuthor": "Lina Verovaya",
-      "photoUnsplash": "https://unsplash.com/photos/hand-brushes-on-brown-plate-VU7FzBEMDUo",
-      "category": "general",
-      "timeMinutes": 20,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to wash suede shoes"
     },
     {
       "slug": "how-to-plant-potatoes",
@@ -113,18 +169,18 @@
       "keyword": "how to take off hair dye from skin"
     },
     {
-      "slug": "how-to-take-out-stripped-screw",
-      "title": "How to Take Out a Stripped Screw Easily",
-      "description": "Learn how to remove a stripped screw using simple tools and effective techniques. Save your project and prevent further damage with this practical guide.",
-      "photoUrl": "https://images.unsplash.com/photo-1566379680937-b375ba1b7691?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxzdHJpcHBlZCUyMHNjcmV3JTIwcmVtb3ZhbHxlbnwxfDB8fHwxNzgxNTk0ODQ4fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "screw lot with white background",
-      "photoAuthor": "Yevgen Tarasov",
-      "photoUnsplash": "https://unsplash.com/photos/screw-lot-with-white-background-PrAZFW-Ityo",
-      "category": "general",
-      "timeMinutes": 20,
+      "slug": "how-to-make-a-google-account",
+      "title": "How to Make a Google Account: Your Step-by-Step Guide",
+      "description": "Learn how to make a Google account quickly and easily. This step-by-step guide covers everything you need to set up your free account for Gmail, YouTube, Drive, and more.",
+      "photoUrl": "https://images.unsplash.com/photo-1762330462333-18eb75514c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw0fHxnb29nbGUlMjBhY2NvdW50JTIwY3JlYXRpb24lMjBzY3JlZW58ZW58MXwwfHx8MTc4MTg4NDU4M3ww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "Google sign in to chrome screen",
+      "photoAuthor": "Zulfugar Karimov",
+      "photoUnsplash": "https://unsplash.com/photos/google-sign-in-to-chrome-screen-PmVlOIClaVo",
+      "category": "tech-devices",
+      "timeMinutes": 10,
       "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to take out a stripped screw"
+      "createdAt": "2026-06-19",
+      "keyword": "how to make a google account"
     },
     {
       "slug": "how-to-remove-nail-glue-from-skin",
@@ -183,20 +239,6 @@
       "keyword": "how to open wine without a corkscrew"
     },
     {
-      "slug": "how-to-wash-caps",
-      "title": "How to Wash Caps: Keep Your Hats Looking Fresh",
-      "description": "Learn the best methods for how to wash caps safely and effectively, preventing damage and maintaining their shape. Get your hats clean and looking new.",
-      "photoUrl": "https://images.unsplash.com/photo-1521369909029-2afed882baee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwYmFzZWJhbGwlMjBjYXAlMjBieSUyMGhhbmR8ZW58MXwwfHx8MTc4MTY4NTIzMXww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "gray baseball cap on white surface",
-      "photoAuthor": "Yang Deng",
-      "photoUnsplash": "https://unsplash.com/photos/gray-baseball-cap-on-white-surface-2loKxdi6Hmo",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "how to wash caps"
-    },
-    {
       "slug": "how-to-permanently-delete-facebook-account",
       "title": "How to Permanently Delete Your Facebook Account",
       "description": "Learn the step-by-step process to permanently delete your Facebook account. We cover backing up your data, navigating settings, and what happens to your information.",
@@ -211,20 +253,6 @@
       "keyword": "how to delete fb account"
     },
     {
-      "slug": "how-to-make-a-website-beginner-guide",
-      "title": "How to Make a Website: A Complete Beginner's Guide",
-      "description": "Learn how to make a website from scratch with this easy-to-follow guide. Discover simple steps for choosing a platform, designing your site, and publishing it online today.",
-      "photoUrl": "https://images.unsplash.com/photo-1560472355-109703aa3edc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3ZWJzaXRlJTIwYnVpbGRlciUyMGludGVyZmFjZXxlbnwxfDB8fHwxNzgxNTYzMjgwfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "turned-on monitor",
-      "photoAuthor": "Stephen Phillips - Hostreviews.co.uk",
-      "photoUnsplash": "https://unsplash.com/photos/turned-on-monitor-zs98a0DtKL4",
-      "category": "tech-devices",
-      "timeMinutes": 90,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to make a website"
-    },
-    {
       "slug": "how-to-get-rid-of-shaving-bumps",
       "title": "How to Get Rid of Shaving Bumps: Effective Solutions",
       "description": "Discover practical and safe methods to get rid of shaving bumps and prevent them from returning. Learn about soothing treatments and proper shaving techniques.",
@@ -237,20 +265,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-16",
       "keyword": "how to get rid of shaving bumps"
-    },
-    {
-      "slug": "how-to-make-diy-all-purpose-cleaning-spray",
-      "title": "How to Make a DIY All-Purpose Cleaning Spray",
-      "description": "Learn how to easily make an effective, natural all-purpose cleaning spray using common household ingredients. Save money and reduce chemicals in your home with this simple recipe.",
-      "photoUrl": "https://images.unsplash.com/photo-1563453392212-326f5e854473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxob21lbWFkZSUyMGNsZWFuaW5nJTIwc3ByYXklMjBib3R0bGV8ZW58MXwwfHx8MTc4MTI4MDA5NXww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "person holding yellow plastic spray bottle",
-      "photoAuthor": "JESHOOTS.COM",
-      "photoUnsplash": "https://unsplash.com/photos/person-holding-yellow-plastic-spray-bottle-__ZMnefoI3k",
-      "category": "diy-crafts",
-      "timeMinutes": 5,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-12",
-      "keyword": "how to make"
     },
     {
       "slug": "how-to-install-smoke-detector",
@@ -309,18 +323,32 @@
       "keyword": "how to get rid of gnats inside"
     },
     {
-      "slug": "how-to-make-a-google-account",
-      "title": "How to Make a Google Account: Your Step-by-Step Guide",
-      "description": "Learn how to make a Google account quickly and easily. This step-by-step guide covers everything you need to set up your free account for Gmail, YouTube, Drive, and more.",
-      "photoUrl": "https://images.unsplash.com/photo-1762330462333-18eb75514c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw0fHxnb29nbGUlMjBhY2NvdW50JTIwY3JlYXRpb24lMjBzY3JlZW58ZW58MXwwfHx8MTc4MTg4NDU4M3ww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "Google sign in to chrome screen",
-      "photoAuthor": "Zulfugar Karimov",
-      "photoUnsplash": "https://unsplash.com/photos/google-sign-in-to-chrome-screen-PmVlOIClaVo",
-      "category": "tech-devices",
-      "timeMinutes": 10,
+      "slug": "how-to-get-rid-of-carpet-beetles",
+      "title": "How to Get Rid of Carpet Beetles: A Guide",
+      "description": "Discover practical steps to eliminate carpet beetles from your home. Learn how to identify, clean infested areas, prevent reinfestation, and protect your belongings safely.",
+      "photoUrl": "https://images.unsplash.com/photo-1683983788140-8c4f6b2a5fb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjYXJwZXQlMjBiZWV0bGUlMjBjbGVhbmluZyUyMGluZmVzdGF0aW9ufGVufDF8MHx8fDE3ODE1NjQyMjl8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a close up of a bug on a surface",
+      "photoAuthor": "DL314 Lin",
+      "photoUnsplash": "https://unsplash.com/photos/a-close-up-of-a-bug-on-a-surface-gw4D8Bjr_44",
+      "category": "general",
+      "timeMinutes": 120,
       "difficulty": "Easy",
-      "createdAt": "2026-06-19",
-      "keyword": "how to make a google account"
+      "createdAt": "2026-06-16",
+      "keyword": "how to get rid of carpet beetles"
+    },
+    {
+      "slug": "how-to-get-rid-of-dust-mites",
+      "title": "How to Get Rid of Dust Mites: A Complete Guide",
+      "description": "Learn effective strategies to eliminate dust mites from your home. Discover practical steps to reduce allergens, improve air quality, and maintain a healthier living environment.",
+      "photoUrl": "https://images.unsplash.com/photo-1675255057189-d2bc51eaa4bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkdXN0JTIwbWl0ZSUyMGNvbnRyb2x8ZW58MXwwfHx8MTc4MTY3OTkwOXww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a close up of a chair with a broom on the floor",
+      "photoAuthor": "František Čaník",
+      "photoUnsplash": "https://unsplash.com/photos/a-close-up-of-a-chair-with-a-broom-on-the-floor-3WubpUuF4jM",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "how to get rid of dust mites"
     },
     {
       "slug": "how-to-grow-taller-maximize-potential",
@@ -435,6 +463,20 @@
       "keyword": "how to get rid of blackheads on nose"
     },
     {
+      "slug": "how-to-delete-cash-app-account",
+      "title": "How to Delete a Cash App Account Permanently",
+      "description": "Learn how to permanently delete your Cash App account quickly and safely. Follow our step-by-step guide to close your account and remove personal data.",
+      "photoUrl": "https://images.unsplash.com/photo-1660811638653-8df94c6ccd87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxldGUlMjBjYXNoJTIwYXBwJTIwYWNjb3VudHxlbnwxfDB8fHwxNzgxNjc4ODM1fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "graphical user interface",
+      "photoAuthor": "Mariia Shalabaieva",
+      "photoUnsplash": "https://unsplash.com/photos/graphical-user-interface-0KMCxhGFKvc",
+      "category": "tech-devices",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "how to delete a cash app account"
+    },
+    {
       "slug": "how-to-fix-wobbly-chair",
       "title": "How to Fix a Wobbly Chair: Simple DIY Guide",
       "description": "Learn how to fix a wobbly chair quickly and easily with this step-by-step guide. Restore stability to your furniture and prevent further damage.",
@@ -477,20 +519,6 @@
       "keyword": "how do you get ink out of clothes"
     },
     {
-      "slug": "how-to-get-rid-of-carpet-beetles",
-      "title": "How to Get Rid of Carpet Beetles: A Guide",
-      "description": "Discover practical steps to eliminate carpet beetles from your home. Learn how to identify, clean infested areas, prevent reinfestation, and protect your belongings safely.",
-      "photoUrl": "https://images.unsplash.com/photo-1683983788140-8c4f6b2a5fb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjYXJwZXQlMjBiZWV0bGUlMjBjbGVhbmluZyUyMGluZmVzdGF0aW9ufGVufDF8MHx8fDE3ODE1NjQyMjl8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a close up of a bug on a surface",
-      "photoAuthor": "DL314 Lin",
-      "photoUnsplash": "https://unsplash.com/photos/a-close-up-of-a-bug-on-a-surface-gw4D8Bjr_44",
-      "category": "general",
-      "timeMinutes": 120,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to get rid of carpet beetles"
-    },
-    {
       "slug": "how-to-get-a-splinter-out",
       "title": "How to Get a Splinter Out Safely and Effectively",
       "description": "Learn how to safely remove a splinter at home using common household items. This guide covers preparation, extraction techniques, and aftercare for a quick recovery.",
@@ -517,20 +545,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to get oil out of clothes"
-    },
-    {
-      "slug": "how-to-get-rid-of-dust-mites",
-      "title": "How to Get Rid of Dust Mites: A Complete Guide",
-      "description": "Learn effective strategies to eliminate dust mites from your home. Discover practical steps to reduce allergens, improve air quality, and maintain a healthier living environment.",
-      "photoUrl": "https://images.unsplash.com/photo-1675255057189-d2bc51eaa4bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkdXN0JTIwbWl0ZSUyMGNvbnRyb2x8ZW58MXwwfHx8MTc4MTY3OTkwOXww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a close up of a chair with a broom on the floor",
-      "photoAuthor": "František Čaník",
-      "photoUnsplash": "https://unsplash.com/photos/a-close-up-of-a-chair-with-a-broom-on-the-floor-3WubpUuF4jM",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "how to get rid of dust mites"
     },
     {
       "slug": "how-to-get-rid-of-black-mold",
@@ -617,6 +631,20 @@
       "keyword": "how to delete snap account"
     },
     {
+      "slug": "how-to-delete-page-word",
+      "title": "How to Delete a Page in Word Easily",
+      "description": "Learn how to delete a page in Microsoft Word, whether it's a blank page, one with content, or an extra page caused by hidden formatting or section breaks.",
+      "photoUrl": "https://images.unsplash.com/photo-1636797581198-1bb1f2d961b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxldGUlMjBwYWdlJTIwd29yZCUyMGRvY3VtZW50fGVufDF8MHx8fDE3ODE1NDYwMTl8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "text",
+      "photoAuthor": "Finn Mund",
+      "photoUnsplash": "https://unsplash.com/photos/text-8q2r2XQpDO0",
+      "category": "tech-devices",
+      "timeMinutes": 10,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how do i delete a page in word"
+    },
+    {
       "slug": "how-to-create-new-gmail-account",
       "title": "How to Create a New Gmail Account - Step-by-Step Guide",
       "description": "Learn how to create a new Gmail account quickly and easily. This guide walks you through setting up your free Google email address from start to finish.",
@@ -643,20 +671,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-16",
       "keyword": "how do you clean a tv screen"
-    },
-    {
-      "slug": "how-to-delete-cash-app-account",
-      "title": "How to Delete a Cash App Account Permanently",
-      "description": "Learn how to permanently delete your Cash App account quickly and safely. Follow our step-by-step guide to close your account and remove personal data.",
-      "photoUrl": "https://images.unsplash.com/photo-1660811638653-8df94c6ccd87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxldGUlMjBjYXNoJTIwYXBwJTIwYWNjb3VudHxlbnwxfDB8fHwxNzgxNjc4ODM1fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "graphical user interface",
-      "photoAuthor": "Mariia Shalabaieva",
-      "photoUnsplash": "https://unsplash.com/photos/graphical-user-interface-0KMCxhGFKvc",
-      "category": "tech-devices",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "how to delete a cash app account"
     },
     {
       "slug": "how-to-delete-a-post-on-facebook",
@@ -825,20 +839,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-15",
       "keyword": "how to clean out washing machine"
-    },
-    {
-      "slug": "how-to-delete-page-word",
-      "title": "How to Delete a Page in Word Easily",
-      "description": "Learn how to delete a page in Microsoft Word, whether it's a blank page, one with content, or an extra page caused by hidden formatting or section breaks.",
-      "photoUrl": "https://images.unsplash.com/photo-1636797581198-1bb1f2d961b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxldGUlMjBwYWdlJTIwd29yZCUyMGRvY3VtZW50fGVufDF8MHx8fDE3ODE1NDYwMTl8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "text",
-      "photoAuthor": "Finn Mund",
-      "photoUnsplash": "https://unsplash.com/photos/text-8q2r2XQpDO0",
-      "category": "tech-devices",
-      "timeMinutes": 10,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-15",
-      "keyword": "how do i delete a page in word"
     },
     {
       "slug": "how-to-clean-a-pillow",
@@ -1237,6 +1237,20 @@
   ],
   "nl": [
     {
+      "slug": "kookmutsjes-versieren-snelle-tips",
+      "title": "Kookmutsjes Versieren: Snelle Tips voor Feestelijke Traktaties",
+      "description": "Leer in 15 minuten hoe je voorgebakken mini cupcakes of koekjes omtovert tot vrolijke kookmutsjes. Perfect voor beginners en elke gelegenheid!",
+      "photoUrl": "https://images.unsplash.com/photo-1519869491916-8ca6f615d6bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxkZWNvcmF0ZWQlMjBtaW5pJTIwY3VwY2FrZXN8ZW58MXwwfHx8MTc4MTgyNDIwNnww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "three cupcakes with toppings",
+      "photoAuthor": "Jennie Brown",
+      "photoUnsplash": "https://unsplash.com/photos/three-cupcakes-with-toppings-oq4ok8GE88c",
+      "category": "kitchen-food",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "kookmutsjes"
+    },
+    {
       "slug": "samsung-telefoon-gids-tips",
       "title": "Haal het Beste uit je Samsung Telefoon: Gids & Tips",
       "description": "Ontdek alles over je Samsung telefoon, van kiezen en instellen tot onderhoud en veelvoorkomende vragen. Optimaliseer je Samsung Galaxy ervaring met onze gids!",
@@ -1279,90 +1293,6 @@
       "keyword": "pompoen soep"
     },
     {
-      "slug": "slim-je-tuin-centrum-bezoek-plannen",
-      "title": "Slim je Tuin Centrum Bezoek Plannen & Optimaal Benutten",
-      "description": "Leer hoe je effectief een tuincentrum bezoekt. Bereid je voor, maak een lijstje en vind de perfecte planten en tools voor jouw tuinprojecten.",
-      "photoUrl": "https://images.unsplash.com/photo-1758524056749-9119981fc961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxnYXJkZW4lMjBjZW50ZXIlMjBzaG9wcGluZyUyMHBsYW50cyUyMHRvb2xzfGVufDF8MHx8fDE3ODE4MTQzMzd8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "Two people working in a greenhouse with plants",
-      "photoAuthor": "Vitaly Gariev",
-      "photoUnsplash": "https://unsplash.com/photos/two-people-working-in-a-greenhouse-with-plants-3UvopSPqjjM",
-      "category": "home-garden",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "tuin centrum"
-    },
-    {
-      "slug": "zelf-taart-bakken-eenvoudig-recept",
-      "title": "Zelf taart bakken: Eenvoudig recept voor beginners",
-      "description": "Leer stap voor stap hoe je een heerlijke taart bakt, van de voorbereiding tot het decoreren. Dit eenvoudige recept is perfect voor beginners en garandeert een smakelijk resultaat.",
-      "photoUrl": "https://images.unsplash.com/photo-1660383534593-6b5221ab80d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxpY2lvdXMlMjBob21lbWFkZSUyMGNha2V8ZW58MXwwfHx8MTc4MTgyMzE3M3ww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a cake with fruit on top",
-      "photoAuthor": "Michal Mikulec",
-      "photoUnsplash": "https://unsplash.com/photos/a-cake-with-fruit-on-top-Ep0guUBbbfQ",
-      "category": "kitchen-food",
-      "timeMinutes": 45,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "taart"
-    },
-    {
-      "slug": "pasta-pesto-maken-recept",
-      "title": "Pasta Pesto Maken: Snel & Makkelijk Recept",
-      "description": "Leer hoe je in een handomdraai heerlijke pasta pesto maakt. Dit eenvoudige recept is perfect voor een snelle maaltijd en boordevol smaak.",
-      "photoUrl": "https://images.unsplash.com/photo-1567608285969-48e4bbe0d399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwYXN0YSUyMHBlc3RvJTIwZGlzaHxlbnwxfDB8fHwxNzgxODE0NDMxfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "pasta food",
-      "photoAuthor": "Victoria Aleksandrova",
-      "photoUnsplash": "https://unsplash.com/photos/pasta-food-n56ZKeW9bVM",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "pasta pesto"
-    },
-    {
-      "slug": "snelle-kip-pasta-pesto-recept",
-      "title": "Snelle Kip Pasta Pesto: Een Heerlijk Recept voor Iedereen",
-      "description": "Leer hoe je in een handomdraai een smaakvolle kip pasta pesto maaltijd bereidt. Perfect voor een snelle doordeweekse avond. Eenvoudig en verrukkelijk!",
-      "photoUrl": "https://images.unsplash.com/photo-1646837921718-dc090cc7c2b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjaGlja2VuJTIwcGVzdG8lMjBwYXN0YSUyMGRpc2h8ZW58MXwwfHx8MTc4MTgyMzExNnww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a bowl of food on a wooden table",
-      "photoAuthor": "engin akyurt",
-      "photoUnsplash": "https://unsplash.com/photos/a-bowl-of-food-on-a-wooden-table-h_nHb-8h5xM",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "kip pasta pesto"
-    },
-    {
-      "slug": "zelf-heerlijke-pompoensoep-maken",
-      "title": "Pompoensoep Maken: Snel & Makkelijk Recept voor Iedereen",
-      "description": "Ontdek hoe je zelf de lekkerste pompoensoep maakt met dit eenvoudige en snelle recept. Perfect voor beginners, vol smaak en voedzaam. Binnen 25 minuten op tafel!",
-      "photoUrl": "https://images.unsplash.com/photo-1666083580269-6f409e1765d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxjcmVhbXklMjBwdW1wa2luJTIwc291cCUyMGJvd2x8ZW58MXwwfHx8MTc4MTgxODg4OHww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a cup of tea next to a plate of pastries",
-      "photoAuthor": "Elena Leya",
-      "photoUnsplash": "https://unsplash.com/photos/a-cup-of-tea-next-to-a-plate-of-pastries-vesMzw6ADMA",
-      "category": "general",
-      "timeMinutes": 25,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "pompoen soep"
-    },
-    {
-      "slug": "kookmutsjes-versieren-snelle-tips",
-      "title": "Kookmutsjes Versieren: Snelle Tips voor Feestelijke Traktaties",
-      "description": "Leer in 15 minuten hoe je voorgebakken mini cupcakes of koekjes omtovert tot vrolijke kookmutsjes. Perfect voor beginners en elke gelegenheid!",
-      "photoUrl": "https://images.unsplash.com/photo-1519869491916-8ca6f615d6bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxkZWNvcmF0ZWQlMjBtaW5pJTIwY3VwY2FrZXN8ZW58MXwwfHx8MTc4MTgyNDIwNnww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "three cupcakes with toppings",
-      "photoAuthor": "Jennie Brown",
-      "photoUnsplash": "https://unsplash.com/photos/three-cupcakes-with-toppings-oq4ok8GE88c",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "kookmutsjes"
-    },
-    {
       "slug": "leuke-recepten-eenvoudig-gezond",
       "title": "Ontdek Leuke Recepten: Eenvoudig, Gezond & Heerlijk!",
       "description": "Zoek je naar leuke recepten die makkelijk te maken zijn en iedereen blij maken? Ontdek inspiratie voor bakken, gezonde maaltijden en feestelijke taarten. Begin vandaag nog!",
@@ -1375,6 +1305,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "leuke recepten"
+    },
+    {
+      "slug": "slim-je-tuin-centrum-bezoek-plannen",
+      "title": "Slim je Tuin Centrum Bezoek Plannen & Optimaal Benutten",
+      "description": "Leer hoe je effectief een tuincentrum bezoekt. Bereid je voor, maak een lijstje en vind de perfecte planten en tools voor jouw tuinprojecten.",
+      "photoUrl": "https://images.unsplash.com/photo-1758524056749-9119981fc961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxnYXJkZW4lMjBjZW50ZXIlMjBzaG9wcGluZyUyMHBsYW50cyUyMHRvb2xzfGVufDF8MHx8fDE3ODE4MTQzMzd8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "Two people working in a greenhouse with plants",
+      "photoAuthor": "Vitaly Gariev",
+      "photoUnsplash": "https://unsplash.com/photos/two-people-working-in-a-greenhouse-with-plants-3UvopSPqjjM",
+      "category": "home-garden",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "tuin centrum"
     },
     {
       "slug": "laptop-kopen-gids",
@@ -1447,6 +1391,20 @@
       "keyword": "oliebollen"
     },
     {
+      "slug": "zelf-taart-bakken-eenvoudig-recept",
+      "title": "Zelf taart bakken: Eenvoudig recept voor beginners",
+      "description": "Leer stap voor stap hoe je een heerlijke taart bakt, van de voorbereiding tot het decoreren. Dit eenvoudige recept is perfect voor beginners en garandeert een smakelijk resultaat.",
+      "photoUrl": "https://images.unsplash.com/photo-1660383534593-6b5221ab80d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxkZWxpY2lvdXMlMjBob21lbWFkZSUyMGNha2V8ZW58MXwwfHx8MTc4MTgyMzE3M3ww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a cake with fruit on top",
+      "photoAuthor": "Michal Mikulec",
+      "photoUnsplash": "https://unsplash.com/photos/a-cake-with-fruit-on-top-Ep0guUBbbfQ",
+      "category": "kitchen-food",
+      "timeMinutes": 45,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "taart"
+    },
+    {
       "slug": "leuke-recepten-snel-makkelijk-plezier",
       "title": "Leuke Recepten: Snel, Makkelijk & Vol Plezier voor Iedereen!",
       "description": "Ontdek de leukste recepten voor elke gelegenheid! Van snelle doordeweekse maaltijden tot feestelijke baksels en gezonde opties. Begin vandaag nog met koken!",
@@ -1461,6 +1419,20 @@
       "keyword": "leuke recepten"
     },
     {
+      "slug": "pasta-pesto-maken-recept",
+      "title": "Pasta Pesto Maken: Snel & Makkelijk Recept",
+      "description": "Leer hoe je in een handomdraai heerlijke pasta pesto maakt. Dit eenvoudige recept is perfect voor een snelle maaltijd en boordevol smaak.",
+      "photoUrl": "https://images.unsplash.com/photo-1567608285969-48e4bbe0d399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwYXN0YSUyMHBlc3RvJTIwZGlzaHxlbnwxfDB8fHwxNzgxODE0NDMxfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "pasta food",
+      "photoAuthor": "Victoria Aleksandrova",
+      "photoUnsplash": "https://unsplash.com/photos/pasta-food-n56ZKeW9bVM",
+      "category": "kitchen-food",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "pasta pesto"
+    },
+    {
       "slug": "hoe-maak-je-een-website",
       "title": "Hoe maak je een website: complete gids voor beginners",
       "description": "Leer stap voor stap hoe je zelf een website maakt, van het kiezen van een platform tot het publiceren. Ideaal voor beginners zonder technische voorkennis.",
@@ -1473,6 +1445,34 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "hoe maak je een website"
+    },
+    {
+      "slug": "snelle-kip-pasta-pesto-recept",
+      "title": "Snelle Kip Pasta Pesto: Een Heerlijk Recept voor Iedereen",
+      "description": "Leer hoe je in een handomdraai een smaakvolle kip pasta pesto maaltijd bereidt. Perfect voor een snelle doordeweekse avond. Eenvoudig en verrukkelijk!",
+      "photoUrl": "https://images.unsplash.com/photo-1646837921718-dc090cc7c2b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjaGlja2VuJTIwcGVzdG8lMjBwYXN0YSUyMGRpc2h8ZW58MXwwfHx8MTc4MTgyMzExNnww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a bowl of food on a wooden table",
+      "photoAuthor": "engin akyurt",
+      "photoUnsplash": "https://unsplash.com/photos/a-bowl-of-food-on-a-wooden-table-h_nHb-8h5xM",
+      "category": "kitchen-food",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "kip pasta pesto"
+    },
+    {
+      "slug": "zelf-heerlijke-pompoensoep-maken",
+      "title": "Pompoensoep Maken: Snel & Makkelijk Recept voor Iedereen",
+      "description": "Ontdek hoe je zelf de lekkerste pompoensoep maakt met dit eenvoudige en snelle recept. Perfect voor beginners, vol smaak en voedzaam. Binnen 25 minuten op tafel!",
+      "photoUrl": "https://images.unsplash.com/photo-1666083580269-6f409e1765d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxjcmVhbXklMjBwdW1wa2luJTIwc291cCUyMGJvd2x8ZW58MXwwfHx8MTc4MTgxODg4OHww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a cup of tea next to a plate of pastries",
+      "photoAuthor": "Elena Leya",
+      "photoUnsplash": "https://unsplash.com/photos/a-cup-of-tea-next-to-a-plate-of-pastries-vesMzw6ADMA",
+      "category": "general",
+      "timeMinutes": 25,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "pompoen soep"
     },
     {
       "slug": "courgette-soep-maken-recept",
@@ -1575,6 +1575,20 @@
       "keyword": "hur tar man bort liktornar"
     },
     {
+      "slug": "hur-rengor-man-en-kaffebryggare",
+      "title": "Hur rengör man en kaffebryggare? Enkel guide",
+      "description": "Lär dig hur du enkelt rengör din kaffebryggare steg för steg med naturliga medel. Få bort kalk och kafferester för godare kaffe och längre livslängd på bryggaren. Enkel och säker guide.",
+      "photoUrl": "https://images.unsplash.com/photo-1641154650778-72db973d97ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxjbGVhbmluZyUyMGNvZmZlZSUyMG1ha2VyfGVufDF8MHx8fDE3ODE4MjY1MTl8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a cup of coffee sitting on top of a coffee maker",
+      "photoAuthor": "Chris Lynch",
+      "photoUnsplash": "https://unsplash.com/photos/a-cup-of-coffee-sitting-on-top-of-a-coffee-maker-8yjFwNVryyQ",
+      "category": "kitchen-food",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "hur rengör man en kaffebryggare"
+    },
+    {
       "slug": "hur-tar-man-bort-en-varta-hemgjord-behandling",
       "title": "Hur tar man bort en vårta: Guide till säker hemmabehandling",
       "description": "Lär dig hur du säkert kan behandla och ta bort vårtor hemma med receptfria medel. Få tips om när du bör söka professionell vård och hur du undviker spridning.",
@@ -1601,76 +1615,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "hur tar man bort hudflikar"
-    },
-    {
-      "slug": "hur-rengor-man-silver",
-      "title": "Hur rengör man silver enkelt hemma? En komplett guide",
-      "description": "Lär dig hur man rengör silver effektivt med enkla husmorsknep. Få ditt silver att glänsa igen med denna praktiska guide för smycken, bestick och föremål.",
-      "photoUrl": "https://images.unsplash.com/photo-1650964336686-7f7be9e35f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjbGVhbmluZyUyMHNpbHZlciUyMGF0JTIwaG9tZXxlbnwxfDB8fHwxNzgxNzAxOTYxfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a person cutting a fruit",
-      "photoAuthor": "Sophie",
-      "photoUnsplash": "https://unsplash.com/photos/a-person-cutting-a-fruit-C5D1HfhzxRk",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "hur rengör man silver"
-    },
-    {
-      "slug": "hur-tar-man-bort-finnar",
-      "title": "Hur tar man bort finnar? Effektiv guide för ren hud",
-      "description": "Lär dig hur man tar bort finnar med säkra och effektiva metoder. Få tips om hudvård, förebyggande åtgärder och vad du behöver för att minska utbrott och få klarare hud.",
-      "photoUrl": "https://images.unsplash.com/photo-1648203276014-20f97ba1f817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMHNraW4lMjByb3V0aW5lfGVufDF8MHx8fDE3ODE4MjU0Mzd8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a woman with a towel on her head and a jar of cream on her face",
-      "photoAuthor": "Kaeme",
-      "photoUnsplash": "https://unsplash.com/photos/a-woman-with-a-towel-on-her-head-and-a-jar-of-cream-on-her-face-WrZutKjrI2U",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "hur tar man bort finnar"
-    },
-    {
-      "slug": "hur-rengor-man-ugnen-effektivt",
-      "title": "Hur rengör man ugnen effektivt – En komplett guide",
-      "description": "Lär dig hur du enkelt och säkert rengör ugnen med naturliga medel som bakpulver och vinäger. Få tips för ett skinande rent resultat och hur du bäst rengör ugnsluckans glas.",
-      "photoUrl": "https://images.unsplash.com/photo-1638405803126-d12de49c7d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMG92ZW4lMjBiYWtpbmclMjBzb2RhfGVufDF8MHx8fDE3ODE4MjQzMjZ8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a can of baking powder sitting on a table",
-      "photoAuthor": "Addilyn Ragsdill @clockworklemon.com",
-      "photoUnsplash": "https://unsplash.com/photos/a-can-of-baking-powder-sitting-on-a-table-_BnaUdHjPnY",
-      "category": "kitchen-food",
-      "timeMinutes": 45,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "hur rengör man ugnen"
-    },
-    {
-      "slug": "tappat-korkortet-vad-gor-man",
-      "title": "Tappat Körkortet? Vad Gör Man – Steg för Steg Guide",
-      "description": "Har du tappat bort ditt körkort? Lugn, det är en vanlig situation. Lär dig snabbt och enkelt vad du ska göra, från att anmäla förlusten till att beställa ett nytt körkort.",
-      "photoUrl": "https://images.unsplash.com/photo-1600875953099-a23a68665bd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxsb3N0JTIwZHJpdmVyJTI3cyUyMGxpY2Vuc2V8ZW58MXwwfHx8MTc4MTgyNjQ2MXww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "person driving car during daytime",
-      "photoAuthor": "Julia Tsukurova",
-      "photoUnsplash": "https://unsplash.com/photos/person-driving-car-during-daytime-uQAx23Qq29I",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "tappat körkortet vad gör man"
-    },
-    {
-      "slug": "hur-rengor-man-en-kaffebryggare",
-      "title": "Hur rengör man en kaffebryggare? Enkel guide",
-      "description": "Lär dig hur du enkelt rengör din kaffebryggare steg för steg med naturliga medel. Få bort kalk och kafferester för godare kaffe och längre livslängd på bryggaren. Enkel och säker guide.",
-      "photoUrl": "https://images.unsplash.com/photo-1641154650778-72db973d97ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw1fHxjbGVhbmluZyUyMGNvZmZlZSUyMG1ha2VyfGVufDF8MHx8fDE3ODE4MjY1MTl8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a cup of coffee sitting on top of a coffee maker",
-      "photoAuthor": "Chris Lynch",
-      "photoUnsplash": "https://unsplash.com/photos/a-cup-of-coffee-sitting-on-top-of-a-coffee-maker-8yjFwNVryyQ",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "hur rengör man en kaffebryggare"
     },
     {
       "slug": "hur-bygger-man-en-vagg-inomhus",
@@ -1701,6 +1645,34 @@
       "keyword": "hur rengör man mässing"
     },
     {
+      "slug": "hur-rengor-man-silver",
+      "title": "Hur rengör man silver enkelt hemma? En komplett guide",
+      "description": "Lär dig hur man rengör silver effektivt med enkla husmorsknep. Få ditt silver att glänsa igen med denna praktiska guide för smycken, bestick och föremål.",
+      "photoUrl": "https://images.unsplash.com/photo-1650964336686-7f7be9e35f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjbGVhbmluZyUyMHNpbHZlciUyMGF0JTIwaG9tZXxlbnwxfDB8fHwxNzgxNzAxOTYxfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a person cutting a fruit",
+      "photoAuthor": "Sophie",
+      "photoUnsplash": "https://unsplash.com/photos/a-person-cutting-a-fruit-C5D1HfhzxRk",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "hur rengör man silver"
+    },
+    {
+      "slug": "hur-tar-man-bort-finnar",
+      "title": "Hur tar man bort finnar? Effektiv guide för ren hud",
+      "description": "Lär dig hur man tar bort finnar med säkra och effektiva metoder. Få tips om hudvård, förebyggande åtgärder och vad du behöver för att minska utbrott och få klarare hud.",
+      "photoUrl": "https://images.unsplash.com/photo-1648203276014-20f97ba1f817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhciUyMHNraW4lMjByb3V0aW5lfGVufDF8MHx8fDE3ODE4MjU0Mzd8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a woman with a towel on her head and a jar of cream on her face",
+      "photoAuthor": "Kaeme",
+      "photoUnsplash": "https://unsplash.com/photos/a-woman-with-a-towel-on-her-head-and-a-jar-of-cream-on-her-face-WrZutKjrI2U",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "hur tar man bort finnar"
+    },
+    {
       "slug": "hur-rengor-man-en-kristallkrona",
       "title": "Hur rengör man en kristallkrona – En komplett guide",
       "description": "Lär dig hur du rengör din kristallkrona säkert och effektivt. Få din krona att glänsa som ny med våra enkla steg för fläckfri renhet och återfå dess forna prakt.",
@@ -1729,6 +1701,20 @@
       "keyword": "hur bygger man trall"
     },
     {
+      "slug": "hur-rengor-man-ugnen-effektivt",
+      "title": "Hur rengör man ugnen effektivt – En komplett guide",
+      "description": "Lär dig hur du enkelt och säkert rengör ugnen med naturliga medel som bakpulver och vinäger. Få tips för ett skinande rent resultat och hur du bäst rengör ugnsluckans glas.",
+      "photoUrl": "https://images.unsplash.com/photo-1638405803126-d12de49c7d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMG92ZW4lMjBiYWtpbmclMjBzb2RhfGVufDF8MHx8fDE3ODE4MjQzMjZ8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a can of baking powder sitting on a table",
+      "photoAuthor": "Addilyn Ragsdill @clockworklemon.com",
+      "photoUnsplash": "https://unsplash.com/photos/a-can-of-baking-powder-sitting-on-a-table-_BnaUdHjPnY",
+      "category": "kitchen-food",
+      "timeMinutes": 45,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "hur rengör man ugnen"
+    },
+    {
       "slug": "hur-rengor-man-en-diskmaskin",
       "title": "Hur Rengör Man En Diskmaskin? Enkel Guide till Renhet",
       "description": "Lär dig hur du rengör din diskmaskin effektivt med vår enkla steg-för-steg-guide. Få bort kalk, fett och dålig lukt för skinande ren disk.",
@@ -1741,6 +1727,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "hur rengör man en diskmaskin"
+    },
+    {
+      "slug": "tappat-korkortet-vad-gor-man",
+      "title": "Tappat Körkortet? Vad Gör Man – Steg för Steg Guide",
+      "description": "Har du tappat bort ditt körkort? Lugn, det är en vanlig situation. Lär dig snabbt och enkelt vad du ska göra, från att anmäla förlusten till att beställa ett nytt körkort.",
+      "photoUrl": "https://images.unsplash.com/photo-1600875953099-a23a68665bd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxsb3N0JTIwZHJpdmVyJTI3cyUyMGxpY2Vuc2V8ZW58MXwwfHx8MTc4MTgyNjQ2MXww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "person driving car during daytime",
+      "photoAuthor": "Julia Tsukurova",
+      "photoUnsplash": "https://unsplash.com/photos/person-driving-car-during-daytime-uQAx23Qq29I",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "tappat körkortet vad gör man"
     },
     {
       "slug": "hur-bygger-man-en-trappa",
