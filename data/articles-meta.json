@@ -1,20 +1,6 @@
 {
   "en": [
     {
-      "slug": "how-to-wash-ugg-boots",
-      "title": "How to Wash UGG Boots Safely at Home",
-      "description": "Learn the safest and most effective methods to hand-wash your UGG boots at home. Protect their delicate sheepskin and suede, keeping them fresh and clean.",
-      "photoUrl": "https://images.unsplash.com/photo-1586810679476-7e2e76421009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwVUdHJTIwYm9vdHMlMjBieSUyMGhhbmR8ZW58MXwwfHx8MTc4MTY4NTE1OHww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "brown and white fur boots",
-      "photoAuthor": "Thibault Penin",
-      "photoUnsplash": "https://unsplash.com/photos/brown-and-white-fur-boots-rlKUNyHUPGc",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "how to wash ugg boots"
-    },
-    {
       "slug": "how-to-remove-a-tick",
       "title": "How to Remove a Tick Safely and Effectively",
       "description": "Learn the proper, safe steps to remove a tick from humans or pets using fine-tipped tweezers. Prevent tick-borne illnesses with these expert tips.",
@@ -55,20 +41,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-16",
       "keyword": "how to wash suede shoes"
-    },
-    {
-      "slug": "how-to-plant-potatoes",
-      "title": "How Do You Plant Potatoes? A Beginner's Guide",
-      "description": "Learn how to plant potatoes in your garden or containers for a bountiful harvest. This guide covers everything from preparing seed potatoes to harvesting, perfect for home growers.",
-      "photoUrl": "https://images.unsplash.com/photo-1621272156504-f10c307159d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwbGFudGluZyUyMHBvdGF0b2VzJTIwZ2FyZGVufGVufDF8MHx8fDE3ODE4MjY2MTB8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "green plants on brown soil",
-      "photoAuthor": "Annie Spratt",
-      "photoUnsplash": "https://unsplash.com/photos/green-plants-on-brown-soil-2qEv_MOltfk",
-      "category": "home-garden",
-      "timeMinutes": 20,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "how do you plant potatoes"
     },
     {
       "slug": "how-to-remove-false-nails",
@@ -141,6 +113,20 @@
       "keyword": "how to remove nail glue from skin"
     },
     {
+      "slug": "how-to-wash-ugg-boots",
+      "title": "How to Wash UGG Boots Safely at Home",
+      "description": "Learn the safest and most effective methods to hand-wash your UGG boots at home. Protect their delicate sheepskin and suede, keeping them fresh and clean.",
+      "photoUrl": "https://images.unsplash.com/photo-1586810679476-7e2e76421009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3YXNoaW5nJTIwVUdHJTIwYm9vdHMlMjBieSUyMGhhbmR8ZW58MXwwfHx8MTc4MTY4NTE1OHww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "brown and white fur boots",
+      "photoAuthor": "Thibault Penin",
+      "photoUnsplash": "https://unsplash.com/photos/brown-and-white-fur-boots-rlKUNyHUPGc",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "how to wash ugg boots"
+    },
+    {
       "slug": "how-to-remove-pop-up-blocker",
       "title": "How to Remove Pop-Up Blocker in Popular Browsers",
       "description": "Learn how to easily disable or configure pop-up blockers in popular web browsers like Chrome, Firefox, Edge, and Safari to allow specific sites or all pop-ups.",
@@ -169,20 +155,6 @@
       "keyword": "how to remove adhesive residue"
     },
     {
-      "slug": "how-to-open-wine-without-corkscrew",
-      "title": "How to Open Wine Without a Corkscrew Safely",
-      "description": "Learn safe and effective methods to open a wine bottle when you don't have a corkscrew. Discover techniques using common household items to enjoy your wine.",
-      "photoUrl": "https://images.unsplash.com/uploads/1412738586759b5b3e6d6/0bc58be1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHx3aW5lJTIwYm90dGxlJTIwbm8lMjBjb3Jrc2NyZXd8ZW58MXwwfHx8MTc4MTU5NDkwOHww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "black glass bottle on brown surface",
-      "photoAuthor": "Jadon Barnes",
-      "photoUnsplash": "https://unsplash.com/photos/black-glass-bottle-on-brown-surface-M5zLJWGKYoA",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Medium",
-      "createdAt": "2026-06-16",
-      "keyword": "how to open wine without a corkscrew"
-    },
-    {
       "slug": "how-to-wash-caps",
       "title": "How to Wash Caps: Keep Your Hats Looking Fresh",
       "description": "Learn the best methods for how to wash caps safely and effectively, preventing damage and maintaining their shape. Get your hats clean and looking new.",
@@ -195,20 +167,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to wash caps"
-    },
-    {
-      "slug": "how-to-permanently-delete-facebook-account",
-      "title": "How to Permanently Delete Your Facebook Account",
-      "description": "Learn the step-by-step process to permanently delete your Facebook account. We cover backing up your data, navigating settings, and what happens to your information.",
-      "photoUrl": "https://images.unsplash.com/photo-1655199798153-a8f56d8655d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxGYWNlYm9vayUyMGFjY291bnQlMjBkZWxldGlvbnxlbnwxfDB8fHwxNzgxMjc5NTc0fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a blue logo with a white cross",
-      "photoAuthor": "Eyestetix Studio",
-      "photoUnsplash": "https://unsplash.com/photos/a-blue-logo-with-a-white-cross-zENFnInKK2g",
-      "category": "tech-devices",
-      "timeMinutes": 10,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-12",
-      "keyword": "how to delete fb account"
     },
     {
       "slug": "how-to-make-a-website-beginner-guide",
@@ -281,6 +239,20 @@
       "keyword": "how to install gutters"
     },
     {
+      "slug": "how-to-plant-potatoes",
+      "title": "How Do You Plant Potatoes? A Beginner's Guide",
+      "description": "Learn how to plant potatoes in your garden or containers for a bountiful harvest. This guide covers everything from preparing seed potatoes to harvesting, perfect for home growers.",
+      "photoUrl": "https://images.unsplash.com/photo-1621272156504-f10c307159d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwbGFudGluZyUyMHBvdGF0b2VzJTIwZ2FyZGVufGVufDF8MHx8fDE3ODE4MjY2MTB8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "green plants on brown soil",
+      "photoAuthor": "Annie Spratt",
+      "photoUnsplash": "https://unsplash.com/photos/green-plants-on-brown-soil-2qEv_MOltfk",
+      "category": "home-garden",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "how do you plant potatoes"
+    },
+    {
       "slug": "how-to-get-rust-off-metal",
       "title": "How to Get Rust Off Metal: A Complete Guide",
       "description": "Learn effective methods to remove rust from various metal surfaces. Discover simple DIY solutions and professional tips to restore your items and prevent future corrosion.",
@@ -293,20 +265,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to get rust off metal"
-    },
-    {
-      "slug": "how-to-get-rid-of-gnats-inside",
-      "title": "How to Get Rid of Gnats Inside Your Home Effectively",
-      "description": "Learn effective methods to get rid of gnats inside your home, from simple DIY traps to eliminating breeding sources in drains, plants, and fruit bowls.",
-      "photoUrl": "https://images.unsplash.com/photo-1583681781296-1eb30ebdb924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxraXRjaGVuJTIwZ25hdHMlMjBmcnVpdCUyMGZseSUyMHRyYXB8ZW58MXwwfHx8MTc4MTYxNDAzN3ww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "yellow lemon fruit on black metal frame",
-      "photoAuthor": "Tom Paolini",
-      "photoUnsplash": "https://unsplash.com/photos/yellow-lemon-fruit-on-black-metal-frame-2C6PzYsp_-s",
-      "category": "home-garden",
-      "timeMinutes": 30,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to get rid of gnats inside"
     },
     {
       "slug": "how-to-make-a-google-account",
@@ -351,34 +309,6 @@
       "keyword": "how to get rid of oil stains on clothes"
     },
     {
-      "slug": "how-to-get-rid-of-mice",
-      "title": "How to Get Rid of Mice Effectively & Safely",
-      "description": "Learn practical and safe methods to get rid of mice from your home. Discover how to identify entry points, set traps, and prevent future infestations.",
-      "photoUrl": "https://images.unsplash.com/photo-1774369914755-44d38630c7b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxnZXQlMjByaWQlMjBvZnxlbnwxfDB8fHwxNzgyMTU5NzI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "photoAlt": "Close-up of an open bible with handwritten notes.",
-      "photoAuthor": "Brett Jordan",
-      "photoUnsplash": "https://unsplash.com/photos/close-up-of-an-open-bible-with-handwritten-notes-PuiWafqzZjU",
-      "category": "home-garden",
-      "timeMinutes": 60,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how to get rid of mice"
-    },
-    {
-      "slug": "how-to-get-rid-of-fleas-in-home",
-      "title": "How to Get Rid of Fleas in Home Fast & Effectively",
-      "description": "Discover effective steps to eliminate fleas from your home. Learn how to treat your pets, clean your environment, and prevent future infestations for a flea-free home.",
-      "photoUrl": "https://images.unsplash.com/photo-1758523670739-0d26a3ee976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxmbGVhJTIwdHJlYXRtZW50JTIwaG9tZSUyMGNsZWFuaW5nfGVufDF8MHx8fDE3ODE2MDkyNzR8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "A woman vacuuming a bright, modern living room",
-      "photoAuthor": "Vitaly Gariev",
-      "photoUnsplash": "https://unsplash.com/photos/a-woman-vacuuming-a-bright-modern-living-room-u8knk6Hl8JA",
-      "category": "home-garden",
-      "timeMinutes": 180,
-      "difficulty": "Moderate",
-      "createdAt": "2026-06-16",
-      "keyword": "how to get rid of fleas in home"
-    },
-    {
       "slug": "how-to-grow-potatoes",
       "title": "How Do You Grow Potatoes? A Simple Guide",
       "description": "Learn how to grow potatoes successfully in your garden or containers. This guide covers everything from chitting seed potatoes to harvesting a bountiful crop at home.",
@@ -393,6 +323,20 @@
       "keyword": "how do you grow potatoes"
     },
     {
+      "slug": "how-to-open-wine-without-corkscrew",
+      "title": "How to Open Wine Without a Corkscrew Safely",
+      "description": "Learn safe and effective methods to open a wine bottle when you don't have a corkscrew. Discover techniques using common household items to enjoy your wine.",
+      "photoUrl": "https://images.unsplash.com/uploads/1412738586759b5b3e6d6/0bc58be1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHx3aW5lJTIwYm90dGxlJTIwbm8lMjBjb3Jrc2NyZXd8ZW58MXwwfHx8MTc4MTU5NDkwOHww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "black glass bottle on brown surface",
+      "photoAuthor": "Jadon Barnes",
+      "photoUnsplash": "https://unsplash.com/photos/black-glass-bottle-on-brown-surface-M5zLJWGKYoA",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Medium",
+      "createdAt": "2026-06-16",
+      "keyword": "how to open wine without a corkscrew"
+    },
+    {
       "slug": "how-to-install-wiper-blades",
       "title": "How to Install Wiper Blades Easily",
       "description": "Learn how to install wiper blades on your car quickly and safely. This guide covers removing old blades and attaching new ones in just minutes, improving driving visibility.",
@@ -405,6 +349,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to install wiper blades"
+    },
+    {
+      "slug": "how-to-permanently-delete-facebook-account",
+      "title": "How to Permanently Delete Your Facebook Account",
+      "description": "Learn the step-by-step process to permanently delete your Facebook account. We cover backing up your data, navigating settings, and what happens to your information.",
+      "photoUrl": "https://images.unsplash.com/photo-1655199798153-a8f56d8655d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxGYWNlYm9vayUyMGFjY291bnQlMjBkZWxldGlvbnxlbnwxfDB8fHwxNzgxMjc5NTc0fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a blue logo with a white cross",
+      "photoAuthor": "Eyestetix Studio",
+      "photoUnsplash": "https://unsplash.com/photos/a-blue-logo-with-a-white-cross-zENFnInKK2g",
+      "category": "tech-devices",
+      "timeMinutes": 10,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-12",
+      "keyword": "how to delete fb account"
     },
     {
       "slug": "how-to-grow-an-avocado-seed",
@@ -435,34 +393,6 @@
       "keyword": "how to get rid of blackheads on nose"
     },
     {
-      "slug": "how-to-fix-wobbly-chair",
-      "title": "How to Fix a Wobbly Chair: Simple DIY Guide",
-      "description": "Learn how to fix a wobbly chair quickly and easily with this step-by-step guide. Restore stability to your furniture and prevent further damage.",
-      "photoUrl": "https://images.unsplash.com/photo-1688319694842-b727b169b815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3b2JibHklMjBjaGFpciUyMHJlcGFpcnxlbnwxfDB8fHwxNzgxMjgwOTgzfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a couple of green chairs sitting on top of a sidewalk",
-      "photoAuthor": "Diane Boots",
-      "photoUnsplash": "https://unsplash.com/photos/a-couple-of-green-chairs-sitting-on-top-of-a-sidewalk-TlyE1p3ZNA0",
-      "category": "home-garden",
-      "timeMinutes": 20,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-12",
-      "keyword": "how to fix"
-    },
-    {
-      "slug": "how-to-fix-leaky-faucet-diy",
-      "title": "How to Fix a Leaky Faucet DIY Guide",
-      "description": "Stop annoying drips and save water by learning how to fix a leaky faucet yourself. This step-by-step DIY guide helps you identify and replace common worn parts quickly and safely.",
-      "photoUrl": "https://images.unsplash.com/photo-1521207418485-99c705420785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxsZWFreSUyMGZhdWNldCUyMHJlcGFpcnxlbnwxfDB8fHwxNzgxNTQ1OTgyfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a faucet running water from a kitchen sink",
-      "photoAuthor": "Imani",
-      "photoUnsplash": "https://unsplash.com/photos/a-faucet-running-water-from-a-kitchen-sink-vDQ-e3RtaoE",
-      "category": "home-garden",
-      "timeMinutes": 30,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-15",
-      "keyword": "how can i fix"
-    },
-    {
       "slug": "how-to-get-ink-out-of-clothes",
       "title": "How to Get Ink Stains Out of Clothes Effectively",
       "description": "Discover practical methods to remove ink stains from your clothes. Learn which common household items can save your favorite garments from pen marks and spills.",
@@ -475,6 +405,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-16",
       "keyword": "how do you get ink out of clothes"
+    },
+    {
+      "slug": "how-to-get-rid-of-gnats-inside",
+      "title": "How to Get Rid of Gnats Inside Your Home Effectively",
+      "description": "Learn effective methods to get rid of gnats inside your home, from simple DIY traps to eliminating breeding sources in drains, plants, and fruit bowls.",
+      "photoUrl": "https://images.unsplash.com/photo-1583681781296-1eb30ebdb924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxraXRjaGVuJTIwZ25hdHMlMjBmcnVpdCUyMGZseSUyMHRyYXB8ZW58MXwwfHx8MTc4MTYxNDAzN3ww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "yellow lemon fruit on black metal frame",
+      "photoAuthor": "Tom Paolini",
+      "photoUnsplash": "https://unsplash.com/photos/yellow-lemon-fruit-on-black-metal-frame-2C6PzYsp_-s",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to get rid of gnats inside"
     },
     {
       "slug": "how-to-get-rid-of-carpet-beetles",
@@ -547,6 +491,20 @@
       "keyword": "how do you get rid of black mold"
     },
     {
+      "slug": "how-to-get-rid-of-mice",
+      "title": "How to Get Rid of Mice Effectively & Safely",
+      "description": "Learn practical and safe methods to get rid of mice from your home. Discover how to identify entry points, set traps, and prevent future infestations.",
+      "photoUrl": "https://images.unsplash.com/photo-1774369914755-44d38630c7b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxnZXQlMjByaWQlMjBvZnxlbnwxfDB8fHwxNzgyMTU5NzI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "photoAlt": "Close-up of an open bible with handwritten notes.",
+      "photoAuthor": "Brett Jordan",
+      "photoUnsplash": "https://unsplash.com/photos/close-up-of-an-open-bible-with-handwritten-notes-PuiWafqzZjU",
+      "category": "home-garden",
+      "timeMinutes": 60,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how to get rid of mice"
+    },
+    {
       "slug": "how-to-get-off-gel-nail-polish",
       "title": "How to Get Off Gel Nail Polish Safely at Home",
       "description": "Learn how to safely and effectively remove gel nail polish at home without damaging your natural nails. Follow our expert guide for a smooth, healthy removal process.",
@@ -559,6 +517,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-15",
       "keyword": "how to get off gel nail polish"
+    },
+    {
+      "slug": "how-to-get-rid-of-fleas-in-home",
+      "title": "How to Get Rid of Fleas in Home Fast & Effectively",
+      "description": "Discover effective steps to eliminate fleas from your home. Learn how to treat your pets, clean your environment, and prevent future infestations for a flea-free home.",
+      "photoUrl": "https://images.unsplash.com/photo-1758523670739-0d26a3ee976d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxmbGVhJTIwdHJlYXRtZW50JTIwaG9tZSUyMGNsZWFuaW5nfGVufDF8MHx8fDE3ODE2MDkyNzR8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "A woman vacuuming a bright, modern living room",
+      "photoAuthor": "Vitaly Gariev",
+      "photoUnsplash": "https://unsplash.com/photos/a-woman-vacuuming-a-bright-modern-living-room-u8knk6Hl8JA",
+      "category": "home-garden",
+      "timeMinutes": 180,
+      "difficulty": "Moderate",
+      "createdAt": "2026-06-16",
+      "keyword": "how to get rid of fleas in home"
     },
     {
       "slug": "how-to-get-blood-stains-out-of-clothes",
@@ -601,20 +573,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how to get rid of carpenter bees"
-    },
-    {
-      "slug": "how-to-delete-snap-account",
-      "title": "How to Delete Your Snapchat Account Permanently",
-      "description": "Learn the step-by-step process to permanently delete your Snapchat account, including how to back up your data and understand the deactivation period.",
-      "photoUrl": "https://images.unsplash.com/photo-1769596722567-eb7fa5ad2ff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxkZWxldGluZyUyMHNuYXBjaGF0JTIwYWNjb3VudHxlbnwxfDB8fHwxNzgxNjg3MjQ0fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "iPhone displaying the snapchat app store page",
-      "photoAuthor": "Swello",
-      "photoUnsplash": "https://unsplash.com/photos/iphone-displaying-the-snapchat-app-store-page-jRa50ueevs8",
-      "category": "tech-devices",
-      "timeMinutes": 10,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "how to delete snap account"
     },
     {
       "slug": "how-to-create-new-gmail-account",
@@ -685,6 +643,34 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how do you delete an app"
+    },
+    {
+      "slug": "how-to-fix-wobbly-chair",
+      "title": "How to Fix a Wobbly Chair: Simple DIY Guide",
+      "description": "Learn how to fix a wobbly chair quickly and easily with this step-by-step guide. Restore stability to your furniture and prevent further damage.",
+      "photoUrl": "https://images.unsplash.com/photo-1688319694842-b727b169b815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHx3b2JibHklMjBjaGFpciUyMHJlcGFpcnxlbnwxfDB8fHwxNzgxMjgwOTgzfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a couple of green chairs sitting on top of a sidewalk",
+      "photoAuthor": "Diane Boots",
+      "photoUnsplash": "https://unsplash.com/photos/a-couple-of-green-chairs-sitting-on-top-of-a-sidewalk-TlyE1p3ZNA0",
+      "category": "home-garden",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-12",
+      "keyword": "how to fix"
+    },
+    {
+      "slug": "how-to-fix-leaky-faucet-diy",
+      "title": "How to Fix a Leaky Faucet DIY Guide",
+      "description": "Stop annoying drips and save water by learning how to fix a leaky faucet yourself. This step-by-step DIY guide helps you identify and replace common worn parts quickly and safely.",
+      "photoUrl": "https://images.unsplash.com/photo-1521207418485-99c705420785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxsZWFreSUyMGZhdWNldCUyMHJlcGFpcnxlbnwxfDB8fHwxNzgxNTQ1OTgyfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a faucet running water from a kitchen sink",
+      "photoAuthor": "Imani",
+      "photoUnsplash": "https://unsplash.com/photos/a-faucet-running-water-from-a-kitchen-sink-vDQ-e3RtaoE",
+      "category": "home-garden",
+      "timeMinutes": 30,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-15",
+      "keyword": "how can i fix"
     },
     {
       "slug": "how-to-clean-stainless-steel-pots",
@@ -785,18 +771,18 @@
       "keyword": "how to clean silverware"
     },
     {
-      "slug": "how-to-clean-shower-head",
-      "title": "How to Clean Your Shower Head for Better Water Flow",
-      "description": "Learn how to effectively clean your shower head using simple household items like vinegar or baking soda. Restore water pressure and remove mineral buildup.",
-      "photoUrl": "https://images.unsplash.com/photo-1613849925362-38fb4c16ff36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw0fHxjbGVhbmluZyUyMHNob3dlciUyMGhlYWQlMjBtaW5lcmFsJTIwYnVpbGR1cHxlbnwxfDB8fHwxNzgxNjgxOTg0fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "black shower head on white ceramic wall tiles",
-      "photoAuthor": "Zac Gudakov",
-      "photoUnsplash": "https://unsplash.com/photos/black-shower-head-on-white-ceramic-wall-tiles-VCUbsNJdZpQ",
-      "category": "general",
-      "timeMinutes": 20,
+      "slug": "how-to-delete-snap-account",
+      "title": "How to Delete Your Snapchat Account Permanently",
+      "description": "Learn the step-by-step process to permanently delete your Snapchat account, including how to back up your data and understand the deactivation period.",
+      "photoUrl": "https://images.unsplash.com/photo-1769596722567-eb7fa5ad2ff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxkZWxldGluZyUyMHNuYXBjaGF0JTIwYWNjb3VudHxlbnwxfDB8fHwxNzgxNjg3MjQ0fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "iPhone displaying the snapchat app store page",
+      "photoAuthor": "Swello",
+      "photoUnsplash": "https://unsplash.com/photos/iphone-displaying-the-snapchat-app-store-page-jRa50ueevs8",
+      "category": "tech-devices",
+      "timeMinutes": 10,
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
-      "keyword": "how to clean shower head"
+      "keyword": "how to delete snap account"
     },
     {
       "slug": "how-to-delete-page-word",
@@ -867,20 +853,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-17",
       "keyword": "how do i delete my facebook account"
-    },
-    {
-      "slug": "how-can-you-get-taller-safely",
-      "title": "How Can You Get Taller? Practical & Safe Ways",
-      "description": "Explore practical and safe methods to maximize your height potential. Learn about nutrition, exercise, posture, and lifestyle changes that can support healthy growth.",
-      "photoUrl": "https://images.unsplash.com/photo-1758599879133-e1f34aeccf63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwcG9zdHVyZSUyMGdyb3d0aHxlbnwxfDB8fHwxNzgxNTYxOTM2fDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "Woman stretching on yoga mat indoors",
-      "photoAuthor": "Vitaly Gariev",
-      "photoUnsplash": "https://unsplash.com/photos/woman-stretching-on-yoga-mat-indoors-vcIsLI9doQM",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-16",
-      "keyword": "how can you get taller"
     },
     {
       "slug": "how-to-build-a-paper-airplane",
@@ -1023,6 +995,20 @@
       "keyword": "how to clean dishwasher"
     },
     {
+      "slug": "how-to-clean-shower-head",
+      "title": "How to Clean Your Shower Head for Better Water Flow",
+      "description": "Learn how to effectively clean your shower head using simple household items like vinegar or baking soda. Restore water pressure and remove mineral buildup.",
+      "photoUrl": "https://images.unsplash.com/photo-1613849925362-38fb4c16ff36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHw0fHxjbGVhbmluZyUyMHNob3dlciUyMGhlYWQlMjBtaW5lcmFsJTIwYnVpbGR1cHxlbnwxfDB8fHwxNzgxNjgxOTg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "black shower head on white ceramic wall tiles",
+      "photoAuthor": "Zac Gudakov",
+      "photoUnsplash": "https://unsplash.com/photos/black-shower-head-on-white-ceramic-wall-tiles-VCUbsNJdZpQ",
+      "category": "general",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "how to clean shower head"
+    },
+    {
       "slug": "how-to-clean-out-washing-machine",
       "title": "How to Clean Your Washing Machine: A Deep Clean Guide",
       "description": "Keep your washing machine fresh and efficient. Learn how to deep clean your appliance with simple steps, removing mold, mildew, and detergent buildup for better laundry results.",
@@ -1035,6 +1021,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-15",
       "keyword": "how to clean out washing machine"
+    },
+    {
+      "slug": "how-can-you-get-taller-safely",
+      "title": "How Can You Get Taller? Practical & Safe Ways",
+      "description": "Explore practical and safe methods to maximize your height potential. Learn about nutrition, exercise, posture, and lifestyle changes that can support healthy growth.",
+      "photoUrl": "https://images.unsplash.com/photo-1758599879133-e1f34aeccf63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwcG9zdHVyZSUyMGdyb3d0aHxlbnwxfDB8fHwxNzgxNTYxOTM2fDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "Woman stretching on yoga mat indoors",
+      "photoAuthor": "Vitaly Gariev",
+      "photoUnsplash": "https://unsplash.com/photos/woman-stretching-on-yoga-mat-indoors-vcIsLI9doQM",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-16",
+      "keyword": "how can you get taller"
     }
   ],
   "de": [
@@ -1237,20 +1237,6 @@
   ],
   "nl": [
     {
-      "slug": "samsung-telefoon-gids-tips",
-      "title": "Haal het Beste uit je Samsung Telefoon: Gids & Tips",
-      "description": "Ontdek alles over je Samsung telefoon, van kiezen en instellen tot onderhoud en veelvoorkomende vragen. Optimaliseer je Samsung Galaxy ervaring met onze gids!",
-      "photoUrl": "https://images.unsplash.com/photo-1581993192008-63e896f4f744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxzYW1zdW5nJTIwcGhvbmUlMjBoYW5kc3xlbnwxfDB8fHwxNzgxODI0MjkyfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "person holding white android smartphone",
-      "photoAuthor": "Daniel Romero",
-      "photoUnsplash": "https://unsplash.com/photos/person-holding-white-android-smartphone-PdfqLVSk-kg",
-      "category": "tech-devices",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "samsung telefoon"
-    },
-    {
       "slug": "snel-makkelijk-lasagnette-recept",
       "title": "Snel & Makkelijk Lasagnette Recept | Jouw Favoriet",
       "description": "Ontdek hoe je zelf een heerlijke en snelle lasagnette maakt met dit eenvoudige recept. Perfect voor een doordeweekse maaltijd. Volg de stappen voor succes!",
@@ -1263,20 +1249,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "lasagnette recept"
-    },
-    {
-      "slug": "pompoen-soep-maken-recept",
-      "title": "Pompoensoep Maken: Eenvoudig & Snel Recept",
-      "description": "Ontdek hoe je zelf heerlijke pompoensoep maakt met dit eenvoudige en snelle recept. Perfect voor beginners! Volg onze stappen voor een smaakvolle en gezonde maaltijd.",
-      "photoUrl": "https://images.unsplash.com/photo-1544681280-d25a782adc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjcmVhbXklMjBwdW1wa2luJTIwc291cCUyMGJvd2x8ZW58MXwwfHx8MTc4MTgyMjEzNHww&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "round white bowl of soup on gray textile",
-      "photoAuthor": "Irina",
-      "photoUnsplash": "https://unsplash.com/photos/round-white-bowl-of-soup-on-gray-textile-89UsTc5bjsw",
-      "category": "kitchen-food",
-      "timeMinutes": 35,
-      "difficulty": "Eenvoudig",
-      "createdAt": "2026-06-18",
-      "keyword": "pompoen soep"
     },
     {
       "slug": "slim-je-tuin-centrum-bezoek-plannen",
@@ -1305,20 +1277,6 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "taart"
-    },
-    {
-      "slug": "pasta-pesto-maken-recept",
-      "title": "Pasta Pesto Maken: Snel & Makkelijk Recept",
-      "description": "Leer hoe je in een handomdraai heerlijke pasta pesto maakt. Dit eenvoudige recept is perfect voor een snelle maaltijd en boordevol smaak.",
-      "photoUrl": "https://images.unsplash.com/photo-1567608285969-48e4bbe0d399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwYXN0YSUyMHBlc3RvJTIwZGlzaHxlbnwxfDB8fHwxNzgxODE0NDMxfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "pasta food",
-      "photoAuthor": "Victoria Aleksandrova",
-      "photoUnsplash": "https://unsplash.com/photos/pasta-food-n56ZKeW9bVM",
-      "category": "kitchen-food",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "pasta pesto"
     },
     {
       "slug": "snelle-kip-pasta-pesto-recept",
@@ -1361,6 +1319,34 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "kookmutsjes"
+    },
+    {
+      "slug": "samsung-telefoon-gids-tips",
+      "title": "Haal het Beste uit je Samsung Telefoon: Gids & Tips",
+      "description": "Ontdek alles over je Samsung telefoon, van kiezen en instellen tot onderhoud en veelvoorkomende vragen. Optimaliseer je Samsung Galaxy ervaring met onze gids!",
+      "photoUrl": "https://images.unsplash.com/photo-1581993192008-63e896f4f744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxzYW1zdW5nJTIwcGhvbmUlMjBoYW5kc3xlbnwxfDB8fHwxNzgxODI0MjkyfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "person holding white android smartphone",
+      "photoAuthor": "Daniel Romero",
+      "photoUnsplash": "https://unsplash.com/photos/person-holding-white-android-smartphone-PdfqLVSk-kg",
+      "category": "tech-devices",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "samsung telefoon"
+    },
+    {
+      "slug": "pompoen-soep-maken-recept",
+      "title": "Pompoensoep Maken: Eenvoudig & Snel Recept",
+      "description": "Ontdek hoe je zelf heerlijke pompoensoep maakt met dit eenvoudige en snelle recept. Perfect voor beginners! Volg onze stappen voor een smaakvolle en gezonde maaltijd.",
+      "photoUrl": "https://images.unsplash.com/photo-1544681280-d25a782adc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjcmVhbXklMjBwdW1wa2luJTIwc291cCUyMGJvd2x8ZW58MXwwfHx8MTc4MTgyMjEzNHww&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "round white bowl of soup on gray textile",
+      "photoAuthor": "Irina",
+      "photoUnsplash": "https://unsplash.com/photos/round-white-bowl-of-soup-on-gray-textile-89UsTc5bjsw",
+      "category": "kitchen-food",
+      "timeMinutes": 35,
+      "difficulty": "Eenvoudig",
+      "createdAt": "2026-06-18",
+      "keyword": "pompoen soep"
     },
     {
       "slug": "leuke-recepten-eenvoudig-gezond",
@@ -1461,6 +1447,20 @@
       "keyword": "leuke recepten"
     },
     {
+      "slug": "pasta-pesto-maken-recept",
+      "title": "Pasta Pesto Maken: Snel & Makkelijk Recept",
+      "description": "Leer hoe je in een handomdraai heerlijke pasta pesto maakt. Dit eenvoudige recept is perfect voor een snelle maaltijd en boordevol smaak.",
+      "photoUrl": "https://images.unsplash.com/photo-1567608285969-48e4bbe0d399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxwYXN0YSUyMHBlc3RvJTIwZGlzaHxlbnwxfDB8fHwxNzgxODE0NDMxfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "pasta food",
+      "photoAuthor": "Victoria Aleksandrova",
+      "photoUnsplash": "https://unsplash.com/photos/pasta-food-n56ZKeW9bVM",
+      "category": "kitchen-food",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "pasta pesto"
+    },
+    {
       "slug": "hoe-maak-je-een-website",
       "title": "Hoe maak je een website: complete gids voor beginners",
       "description": "Leer stap voor stap hoe je zelf een website maakt, van het kiezen van een platform tot het publiceren. Ideaal voor beginners zonder technische voorkennis.",
@@ -1547,20 +1547,6 @@
   ],
   "sv": [
     {
-      "slug": "hur-rengor-man-tvattmaskin",
-      "title": "Hur rengör man tvättmaskin? En komplett guide",
-      "description": "Lär dig hur rengör man tvättmaskin för att undvika dålig lukt och förlänga dess livslängd. Följ vår enkla guide för en ren och fräsch maskin. Få tips på medel och metoder.",
-      "photoUrl": "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjbGVhbmluZyUyMHdhc2hpbmclMjBtYWNoaW5lfGVufDF8MHx8fDE3ODE3MDE4OTd8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "white front load washing machine",
-      "photoAuthor": "Oli Woodman",
-      "photoUnsplash": "https://unsplash.com/photos/white-front-load-washing-machine-nUL_PP69IPA",
-      "category": "general",
-      "timeMinutes": 20,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "hur rengör man tvättmaskin"
-    },
-    {
       "slug": "hur-tar-man-bort-liktornar",
       "title": "Hur tar man bort liktornar säkert hemma",
       "description": "Lär dig hur du säkert och effektivt tar bort liktornar hemma med enkla metoder. Följ vår guide för mjuka fötter och en smärtfri vardag.",
@@ -1603,20 +1589,6 @@
       "keyword": "hur tar man bort hudflikar"
     },
     {
-      "slug": "hur-rengor-man-silver",
-      "title": "Hur rengör man silver enkelt hemma? En komplett guide",
-      "description": "Lär dig hur man rengör silver effektivt med enkla husmorsknep. Få ditt silver att glänsa igen med denna praktiska guide för smycken, bestick och föremål.",
-      "photoUrl": "https://images.unsplash.com/photo-1650964336686-7f7be9e35f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjbGVhbmluZyUyMHNpbHZlciUyMGF0JTIwaG9tZXxlbnwxfDB8fHwxNzgxNzAxOTYxfDA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a person cutting a fruit",
-      "photoAuthor": "Sophie",
-      "photoUnsplash": "https://unsplash.com/photos/a-person-cutting-a-fruit-C5D1HfhzxRk",
-      "category": "general",
-      "timeMinutes": 15,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-17",
-      "keyword": "hur rengör man silver"
-    },
-    {
       "slug": "hur-tar-man-bort-finnar",
       "title": "Hur tar man bort finnar? Effektiv guide för ren hud",
       "description": "Lär dig hur man tar bort finnar med säkra och effektiva metoder. Få tips om hudvård, förebyggande åtgärder och vad du behöver för att minska utbrott och få klarare hud.",
@@ -1631,20 +1603,6 @@
       "keyword": "hur tar man bort finnar"
     },
     {
-      "slug": "hur-rengor-man-ugnen-effektivt",
-      "title": "Hur rengör man ugnen effektivt – En komplett guide",
-      "description": "Lär dig hur du enkelt och säkert rengör ugnen med naturliga medel som bakpulver och vinäger. Få tips för ett skinande rent resultat och hur du bäst rengör ugnsluckans glas.",
-      "photoUrl": "https://images.unsplash.com/photo-1638405803126-d12de49c7d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMG92ZW4lMjBiYWtpbmclMjBzb2RhfGVufDF8MHx8fDE3ODE4MjQzMjZ8MA&ixlib=rb-4.1.0&q=80&w=400",
-      "photoAlt": "a can of baking powder sitting on a table",
-      "photoAuthor": "Addilyn Ragsdill @clockworklemon.com",
-      "photoUnsplash": "https://unsplash.com/photos/a-can-of-baking-powder-sitting-on-a-table-_BnaUdHjPnY",
-      "category": "kitchen-food",
-      "timeMinutes": 45,
-      "difficulty": "Easy",
-      "createdAt": "2026-06-18",
-      "keyword": "hur rengör man ugnen"
-    },
-    {
       "slug": "tappat-korkortet-vad-gor-man",
       "title": "Tappat Körkortet? Vad Gör Man – Steg för Steg Guide",
       "description": "Har du tappat bort ditt körkort? Lugn, det är en vanlig situation. Lär dig snabbt och enkelt vad du ska göra, från att anmäla förlusten till att beställa ett nytt körkort.",
@@ -1657,6 +1615,20 @@
       "difficulty": "Easy",
       "createdAt": "2026-06-18",
       "keyword": "tappat körkortet vad gör man"
+    },
+    {
+      "slug": "hur-rengor-man-tvattmaskin",
+      "title": "Hur rengör man tvättmaskin? En komplett guide",
+      "description": "Lär dig hur rengör man tvättmaskin för att undvika dålig lukt och förlänga dess livslängd. Följ vår enkla guide för en ren och fräsch maskin. Få tips på medel och metoder.",
+      "photoUrl": "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwzfHxjbGVhbmluZyUyMHdhc2hpbmclMjBtYWNoaW5lfGVufDF8MHx8fDE3ODE3MDE4OTd8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "white front load washing machine",
+      "photoAuthor": "Oli Woodman",
+      "photoUnsplash": "https://unsplash.com/photos/white-front-load-washing-machine-nUL_PP69IPA",
+      "category": "general",
+      "timeMinutes": 20,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "hur rengör man tvättmaskin"
     },
     {
       "slug": "hur-rengor-man-en-kaffebryggare",
@@ -1701,6 +1673,20 @@
       "keyword": "hur rengör man mässing"
     },
     {
+      "slug": "hur-rengor-man-silver",
+      "title": "Hur rengör man silver enkelt hemma? En komplett guide",
+      "description": "Lär dig hur man rengör silver effektivt med enkla husmorsknep. Få ditt silver att glänsa igen med denna praktiska guide för smycken, bestick och föremål.",
+      "photoUrl": "https://images.unsplash.com/photo-1650964336686-7f7be9e35f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwyfHxjbGVhbmluZyUyMHNpbHZlciUyMGF0JTIwaG9tZXxlbnwxfDB8fHwxNzgxNzAxOTYxfDA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a person cutting a fruit",
+      "photoAuthor": "Sophie",
+      "photoUnsplash": "https://unsplash.com/photos/a-person-cutting-a-fruit-C5D1HfhzxRk",
+      "category": "general",
+      "timeMinutes": 15,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-17",
+      "keyword": "hur rengör man silver"
+    },
+    {
       "slug": "hur-rengor-man-en-kristallkrona",
       "title": "Hur rengör man en kristallkrona – En komplett guide",
       "description": "Lär dig hur du rengör din kristallkrona säkert och effektivt. Få din krona att glänsa som ny med våra enkla steg för fläckfri renhet och återfå dess forna prakt.",
@@ -1727,6 +1713,20 @@
       "difficulty": "Medel",
       "createdAt": "2026-06-18",
       "keyword": "hur bygger man trall"
+    },
+    {
+      "slug": "hur-rengor-man-ugnen-effektivt",
+      "title": "Hur rengör man ugnen effektivt – En komplett guide",
+      "description": "Lär dig hur du enkelt och säkert rengör ugnen med naturliga medel som bakpulver och vinäger. Få tips för ett skinande rent resultat och hur du bäst rengör ugnsluckans glas.",
+      "photoUrl": "https://images.unsplash.com/photo-1638405803126-d12de49c7d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzU1MDd8MHwxfHNlYXJjaHwxfHxjbGVhbmluZyUyMG92ZW4lMjBiYWtpbmclMjBzb2RhfGVufDF8MHx8fDE3ODE4MjQzMjZ8MA&ixlib=rb-4.1.0&q=80&w=400",
+      "photoAlt": "a can of baking powder sitting on a table",
+      "photoAuthor": "Addilyn Ragsdill @clockworklemon.com",
+      "photoUnsplash": "https://unsplash.com/photos/a-can-of-baking-powder-sitting-on-a-table-_BnaUdHjPnY",
+      "category": "kitchen-food",
+      "timeMinutes": 45,
+      "difficulty": "Easy",
+      "createdAt": "2026-06-18",
+      "keyword": "hur rengör man ugnen"
     },
     {
       "slug": "hur-rengor-man-en-diskmaskin",
