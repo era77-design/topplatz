@@ -267,7 +267,7 @@ only the ones that make sense as genuine, distinct questions.
     links_section = ''
     if related_articles:
         links_list = '\n'.join(
-            f'- [{a["title"]}](/{a["lang"]}/{a["slug"]})'
+            f'- [{a["title"]}](/{lang}/{a["slug"]})'
             for a in related_articles[:5]
         )
         links_section = f"""
